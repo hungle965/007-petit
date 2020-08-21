@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/base/build/static/css/main.417b99dc.chunk.css",
-    "main.js": "/base/build/static/js/main.49a46a3f.chunk.js",
-    "main.js.map": "/base/build/static/js/main.49a46a3f.chunk.js.map",
-    "runtime-main.js": "/base/build/static/js/runtime-main.785e6f6a.js",
-    "runtime-main.js.map": "/base/build/static/js/runtime-main.785e6f6a.js.map",
-    "static/js/2.fff39724.chunk.js": "/base/build/static/js/2.fff39724.chunk.js",
-    "static/js/2.fff39724.chunk.js.map": "/base/build/static/js/2.fff39724.chunk.js.map",
-    "index.html": "/base/build/index.html",
-    "precache-manifest.5b5854ba4211269d17f18b566fd24b79.js": "/base/build/precache-manifest.5b5854ba4211269d17f18b566fd24b79.js",
-    "service-worker.js": "/base/build/service-worker.js",
-    "static/css/main.417b99dc.chunk.css.map": "/base/build/static/css/main.417b99dc.chunk.css.map",
-    "static/js/2.fff39724.chunk.js.LICENSE.txt": "/base/build/static/js/2.fff39724.chunk.js.LICENSE.txt"
+    "main.css": "/template/react-base/build/static/css/main.417b99dc.chunk.css",
+    "main.js": "/template/react-base/build/static/js/main.fe82de1e.chunk.js",
+    "main.js.map": "/template/react-base/build/static/js/main.fe82de1e.chunk.js.map",
+    "runtime-main.js": "/template/react-base/build/static/js/runtime-main.da55bb54.js",
+    "runtime-main.js.map": "/template/react-base/build/static/js/runtime-main.da55bb54.js.map",
+    "static/js/2.0e4e23c3.chunk.js": "/template/react-base/build/static/js/2.0e4e23c3.chunk.js",
+    "static/js/2.0e4e23c3.chunk.js.map": "/template/react-base/build/static/js/2.0e4e23c3.chunk.js.map",
+    "index.html": "/template/react-base/build/index.html",
+    "precache-manifest.39290ce511ebc2918866d784f725ecb3.js": "/template/react-base/build/precache-manifest.39290ce511ebc2918866d784f725ecb3.js",
+    "service-worker.js": "/template/react-base/build/service-worker.js",
+    "static/css/main.417b99dc.chunk.css.map": "/template/react-base/build/static/css/main.417b99dc.chunk.css.map",
+    "static/js/2.0e4e23c3.chunk.js.LICENSE.txt": "/template/react-base/build/static/js/2.0e4e23c3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.785e6f6a.js",
-    "static/js/2.fff39724.chunk.js",
+    "static/js/runtime-main.da55bb54.js",
+    "static/js/2.0e4e23c3.chunk.js",
     "static/css/main.417b99dc.chunk.css",
-    "static/js/main.49a46a3f.chunk.js"
+    "static/js/main.fe82de1e.chunk.js"
   ]
 }
