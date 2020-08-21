@@ -1,11 +1,13 @@
 import '../css/main.css'
 import $ from 'jquery'
 import React, {Component} from 'react'
+import Preloader from './common/Preloader'
 import Header from './common/Header'
 import Featured from './common/Featured'
 import Form from './common/Form'
 import Footer from './common/Footer'
 import Content from './common/Header'
+import Fixed from './common/Fixed'
 class Main extends Component {
     constructor(props) {
         super(props)
@@ -45,11 +47,13 @@ class Main extends Component {
     }
     render() {
         return [
+            <Preloader data={this.state} />,
             <Header data={this.state} />,
             <Featured data={this.state} />,
             <Content data={this.state} />,
             <Form data={this.state} />,
-            <Footer data={this.state} />
+            <Footer data={this.state} />,
+            <Fixed data={this.state} />
         ]
     }
 }
