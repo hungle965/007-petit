@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecokit - Top Quality, Modular, Prefab, Sustainable, Energy Efficient Homes</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- cta-button -->
+    <script src="https://unpkg.com/@nerd-coder/cta-bar/dist/main.js" async></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body id="body">
+    {% include './_header.html' %}
+    <main class="main" id="main">
+        {% block main %}{% endblock %}
+    </main>
+    {% include './_footer.html' %}
+    <cta-bar></cta-bar>
+    <div class="backToTop" id="backToTop" onclick='window.scrollTo({left:0, top:0, behavior:`smooth`})'>
+        <i class="fas fa-angle-up angleup2"></i>
+        <i class="fas fa-angle-up angleup1"></i>
+    </div>
+    <script src="/js/index.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper-container', {
+
+            spaceBetween: 0,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // // Navigation arrows
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+
+        })
+    </script>
+
+    <script>
+        var swiper2 = new Swiper('.swiper-container2', {
+            direction: 'horizontal',
+            loop: true,
+
+            slidesPerView: 1,
+        
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+        });
+    </script>
+</body>
+
+</html>

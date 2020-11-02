@@ -1,0 +1,307 @@
+.hero {
+  background: url(../../img/1/ecokit_hero_clouds-min.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .arrowDown {
+      display: none;
+
+      @media (min-width: 1024px) {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 45%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        z-index: 20;
+        animation: arrowBox 5s infinite;
+      }
+
+      @keyframes arrowBox {
+        0% {
+          transform: translateY(0px);
+        }
+        25% {
+          transform: translateY(15px);
+        }
+        50% {
+          transform: translateY(15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .btnDown {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .line1 {
+          height: 50%;
+          width: 3px;
+          position: absolute;
+          bottom: 40px;
+          right: 17px;
+          background-color: rgba(255, 255, 255, 0.5);
+          transform: rotate(45deg);
+          background-color: #f36b22ff;
+          border: 1px solid black;
+          animation: arrow 3s infinite;
+        }
+
+        .line2 {
+          height: 50%;
+          width: 3px;
+          position: absolute;
+          bottom: 40px;
+          left: 20px;
+          background-color: rgba(255, 255, 255, 0.5);
+          transform: rotate(-45deg);
+          background-color: #f36b22ff;
+          border: 1px solid black;
+          animation: arrow 3s infinite;
+        }
+
+        .line3 {
+          height: 50%;
+          width: 3px;
+          position: absolute;
+          bottom: 15px;
+          right: 17px;
+          background-color: rgba(255, 255, 255, 0.5);
+          background-color: #f36b22ff;
+          border: 1px solid black;
+          transform: rotate(45deg);
+          animation: arrow 3s infinite;
+          animation-delay: 1s;
+        }
+
+        .line4 {
+          height: 50%;
+          width: 3px;
+          position: absolute;
+          bottom: 15px;
+          left: 20px;
+          background-color: rgba(255, 255, 255, 0.5);
+          transform: rotate(-45deg);
+          background-color: #f36b22ff;
+          border: 1px solid black;
+          animation: arrow 3s infinite;
+          animation-delay: 1s;
+        }
+
+        @keyframes arrow {
+          0% {
+            opacity: 1;
+          }
+          25% {
+            opacity: 0.75;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .heroBG {
+      background: url(../../img/2/ecokit_hero_jindabyne-min_optimized-1.png);
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .heroContent {
+        width: 100%;
+        height: auto;
+        padding: 80px 10px 0px 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 800px) {
+          width: 50.6%;
+          padding-left: 90px;
+          margin-bottom: 100px;
+        }
+
+        @media (min-width: 1400px) {
+          width: 41.6%;
+          padding-left: 90px;
+          margin-bottom: 100px;
+        }
+
+        @media (max-width: 500px) {
+          padding: 30px;
+          padding-top: 110px;
+        }
+
+        @media (max-width: 400px) {
+          padding: 10px;
+          margin-top: 40px;
+        }
+
+        .wpbText {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+          position: relative;
+
+          @media (max-width: 800px) {
+            width: 100%;
+            height: 430px;
+            text-align: center;
+            max-width: 600px;
+            max-height: 500px;
+            padding: calc(600px * 0.06);
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background: #fff;
+              opacity: 0.75;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          @media (max-width: 500px) {
+            padding: 10px;
+            height: 470px;
+          }
+
+          @media (max-width: 350px) {
+            padding: 0px;
+            height: 440px;
+          }
+
+          .headline {
+            position: relative;
+            z-index: 10;
+
+            @media (max-width: 800px) {
+              padding-top: 30px;
+            }
+
+            h1 {
+              font-family: Montserrat, sans-serif;
+              letter-spacing: 0;
+              font-size: 45px;
+              line-height: 63px;
+              font-weight: 300;
+
+              @media (max-width: 800px) {
+                font-size: 22.4px;
+                line-height: 32px;
+                font-weight: 700;
+              }
+            }
+
+            h2 {
+              font-family: Montserrat;
+              letter-spacing: 0;
+              font-size: 50px;
+              line-height: 70px;
+              font-weight: 700;
+
+              @media (max-width: 800px) {
+                font-size: 22.4px;
+                line-height: 32px;
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .textHero {
+            position: relative;
+            z-index: 10;
+            margin-top: 20px;
+            p {
+              font-size: 18px;
+              line-height: 1.7;
+              font-weight: normal;
+              color: #3a3a3a;
+              font-family: Montserrat;
+              font-weight: 400;
+            }
+          }
+
+          .btnHero {
+            margin-top: 40px;
+            color: #fff;
+            padding: 18px 20px 18px 0px;
+            font-size: 14px;
+            font-family: Montserrat;
+            text-transform: capitalize;
+            font-weight: 500;
+            background-color: #f36b22;
+            width: 265px;
+            border-radius: 200px;
+            display: flex;
+            justify-content: center;
+            transition: opacity 0.2s;
+
+            @media (max-width: 800px) {
+              margin: 0 auto;
+              margin-top: 30px;
+              position: relative;
+              z-index: 10;
+            }
+
+            p {
+              transform: translateX(15px);
+              transition: transform 0.2s;
+            }
+
+            i {
+              transform: translateX(0px);
+              opacity: 0;
+              transition: all 0.2s;
+            }
+
+            &:hover {
+              opacity: 0.9;
+              p {
+                transform: translateX(0px);
+              }
+
+              i {
+                transform: translateX(20px);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .nectarShapeDivider {
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        height: 80px;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+  }
+}

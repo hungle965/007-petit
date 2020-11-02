@@ -1,0 +1,200 @@
+.gridText {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  @media (max-width: 2000px) {
+    padding-bottom: 100px;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 800px) {
+      display: grid;
+      //   flex-wrap: wrap;
+      //   justify-content: space-evenly;
+
+      grid:
+        "c1 c1 c2 c4 ." minmax(auto, 50%)
+        "c1 c1 c3 c4 ." minmax(auto, auto)
+        / 1fr 1fr 1fr 1fr 1fr;
+
+      @media (min-width: 2000px) {
+        grid:
+          "c1 c1 c2 c4 ." minmax(auto, 25%)
+          "c1 c1 c3 c4 ." minmax(auto, auto)
+          / 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
+
+    .contentText1 {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 15%;
+      padding-bottom: 0px;
+      grid-area: c1;
+      position: relative;
+
+      @media (min-width: 800px) {
+        // width: 33.333%;
+        padding: calc(100vw * 0.065);
+        padding-top: 40px;
+        text-align: right;
+      }
+
+      .blobmary {
+        display: none;
+
+        @media (min-width: 800px) {
+          display: block;
+          position: absolute;
+          bottom: 50%;
+          left: 20%;
+          width: 70%;
+        }
+
+        @media (min-width: 1440px) {
+          bottom: -50px;
+        }
+
+        @media (min-width: 2000px) {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      h3 {
+        font-size: 22.4px;
+        line-height: 32px;
+        font-family: Montserrat;
+        letter-spacing: 0;
+
+        @media (min-width: 1024px) {
+          font-size: 31.5px;
+          line-height: 44.1px;
+          font-weight: 300;
+        }
+
+        @media (min-width: 1440px) {
+          font-size: 44px;
+          line-height: 63px;
+          font-weight: 300;
+        }
+      }
+
+      h1 {
+        margin-top: 10px;
+        font-size: 32.5px;
+        line-height: 45.5px;
+
+        @media (min-width: 1440px) {
+          font-size: 45px;
+          line-height: 63px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .contentText2 {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 15%;
+      padding-bottom: 0px;
+      grid-area: c2;
+
+      @media (min-width: 700px) {
+        padding-top: 30px;
+      }
+
+      @media (min-width: 800px) {
+        padding: calc(100vw * 0.01);
+        padding-top: 40px;
+        padding-bottom: 0px;
+        text-align: left;
+      }
+    }
+
+    .contentText3 {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 15%;
+      padding-bottom: 0px;
+      grid-area: c3;
+
+      @media (min-width: 700px) {
+        padding-top: 30px;
+      }
+
+      @media (min-width: 800px) {
+        padding: calc(100vw * 0.01);
+        padding-top: 0px;
+        padding-bottom: 0px;
+        text-align: left;
+        margin-top: 40px;
+      }
+
+      @media (min-width: 1440px) {
+        margin-top: 0px;
+      }
+    }
+
+    .contentText4 {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 15%;
+      position: relative;
+      grid-area: c4;
+
+      @media (min-width: 700px) {
+        padding-top: 30px;
+      }
+
+      @media (min-width: 800px) {
+        padding: calc(100vw * 0.01);
+        margin-left: 30%;
+        padding-top: 30px;
+        padding-bottom: 0px;
+        text-align: left;
+      }
+    }
+
+    .blobPink {
+      padding-top: 80px;
+      width: 100%;
+      padding: 0px 25px;
+
+      @media (min-width: 800px) {
+        display: none;
+      }
+    }
+
+    .blobmary {
+      position: absolute;
+      bottom: 45px;
+      left: 10px;
+      width: 90%;
+
+      @media (min-width: 800px) {
+        display: none;
+      }
+    }
+    h5 {
+      font-family: Montserrat;
+      font-size: 19px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 10px;
+      font-family: Montserrat;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
