@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #190f0a;
+  padding-left: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  will-change: background-color;
+  transition: background-color 0.5s;
+  .logo {
+    position: relative;
+    top: 10%;
+    width: 120px;
+    height: auto;
+    opacity: 1;
+
+    will-change: opacity;
+    transition: opacicy 0.5s;
+  }
+  @import './btnMainMenu';
+}
+.onTop {
+  background: none;
+  .logo {
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.5s;
+  }
+}

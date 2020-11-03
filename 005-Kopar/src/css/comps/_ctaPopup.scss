@@ -1,0 +1,110 @@
+@use '../vars' as *;
+@use '../mixins';
+
+.ctaPopUp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+
+  color: $color-pri;
+  background-color: $color-blackcopper;
+  padding: 5px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  @include mixins.transitionFor(0.5s, bottom);
+
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    left: unset;
+    top: unset;
+    bottom: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+
+  .icon {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 24px;
+    max-height: 100%;
+    transform-origin: top;
+    animation: ring 4s infinite;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &.down {
+    bottom: 20px;
+    @include mixins.transitionFor(0.5s, bottom);
+    @media screen and (min-width: 768px) {
+      bottom: 0;
+    }
+  }
+
+  > .wrapper {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid: 'c1 c2 c3' 1fr;
+      gap: 10px;
+      align-self: center;
+      letter-spacing: 1.5px;
+
+      > img {
+        grid-area: c1;
+        margin: auto;
+      }
+
+      > span {
+        grid-area: c2;
+        margin: auto;
+      }
+
+      > .ctaBtn {
+        grid-area: c3;
+        border: 1px solid #e8ad80;
+        padding: 5px 10px;
+        cursor: pointer;
+        @include mixins.transitionFor(0.2s, color);
+
+        &:hover {
+          background-color: $color-blackcopper;
+          @include mixins.transitionFor(0.2s, color);
+        }
+      }
+    }
+  }
+
+  //animation
+  @keyframes ring {
+    0% {
+      transform: rotate(20deg);
+    }
+    3% {
+      transform: rotate(-15deg);
+    }
+    9% {
+      transform: rotate(10deg);
+    }
+    12% {
+      transform: rotate(-5deg);
+    }
+    15%,
+    100% {
+      transform: rotate(0);
+    }
+  }
+}

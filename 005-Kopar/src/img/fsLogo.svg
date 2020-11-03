@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LOGO FS - line - white</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32"></rect>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LOGO-FS---line---white" transform="translate(0.800000, 0.500000)">
+            <g id="Group-Copy">
+                <g id="Path-+-Path-2-Mask">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <rect stroke="#d99a78" x="0.5" y="0.5" width="31" height="31"></rect>
+                    <g id="Group-3" mask="url(#mask-2)" fill-rule="nonzero" stroke="#d99a78" stroke-linecap="round" stroke-linejoin="round">
+                        <g transform="translate(7.840000, 0.000000)">
+                            <line x1="1.24344979e-15" y1="0.0340909091" x2="8.02314815" y2="31.9869529" id="Path"></line>
+                            <line x1="4.13804714" y1="16.5130471" x2="24.2117003" y2="1.0658141e-15" id="Path-2"></line>
+                        </g>
+                    </g>
+                </g>
+                <path d="M23.7766143,21.7752182 L22.4,21.7752182 L22.4,20.904712 L23.7766143,20.904712 L23.7766143,16.9165794 C23.7766143,15.6749211 23.9925517,14.7673094 24.4244328,14.1937173 C24.856314,13.6201251 25.510874,13.3333333 26.3881326,13.3333333 C26.8200138,13.3333333 27.2181483,13.434554 27.582548,13.6369983 L27.1776614,14.3253054 C27.0022097,14.1903425 26.7660282,14.1228621 26.4691099,14.1228621 C25.8752734,14.1228621 25.4366506,14.3354254 25.1532286,14.7605585 C24.8698066,15.1856915 24.7280977,15.8976099 24.7280977,16.8963351 L24.7280977,20.904712 L27.3801047,20.904712 L27.3801047,21.7752182 L24.7280977,21.7752182 L24.7280977,28.8 L23.7766143,28.8 L23.7766143,21.7752182 Z" id="f" fill="#d99a78"></path>
+            </g>
+        </g>
+    </g>
+</svg>

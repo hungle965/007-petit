@@ -1,0 +1,26 @@
+.button-mainmenu {
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  height: 40px;
+  cursor: pointer;
+  &.mobile{
+    height: 10px;
+  }
+  span {
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    &:nth-child(1) {
+      background: #d99a78;
+      height: 5px;
+      transform: translate(-20px, -5px);
+    }
+    &:nth-child(2) {
+      background: white;
+      transform: translate(-5px, 5px);
+    }
+  }
+}

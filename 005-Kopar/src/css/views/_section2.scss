@@ -1,0 +1,18 @@
+.section2 {
+  .contentHeadlineLogo {
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+    img {
+      width: 240px;
+      height: 216px;
+      vertical-align: top;
+      margin-left: -10px;
+      @media (max-width: 768px) {
+        width: 150px;
+        margin-left: 0px;
+      }
+    }
+  }
+}

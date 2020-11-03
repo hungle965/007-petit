@@ -1,0 +1,15 @@
+.main {
+  overflow-x: hidden;
+  @import 'views/hero';
+  @import 'views/section';
+  @import 'views/section1';
+  @import 'views/section2';
+  @import 'views/section3';
+  @import 'views/section5';
+  @import 'comps/popUp';
+  @import 'comps/ctaPopup';
+}
+
+.noScroll {
+  overflow: hidden;
+}

@@ -1,0 +1,204 @@
+.section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .wrapper {
+    height: 100vh;
+    .left {
+      position: relative;
+      z-index: 100;
+      margin-top: -350px;
+      @media (max-width: 425px) {
+        margin-top: -200px;
+      }
+    }
+    .left2 {
+      margin-top: -1150px;
+      @media (max-width: 1024px) {
+        margin-top: -700px;
+      }
+      @media (max-width: 768px) {
+        margin-top: -500px;
+      }
+      @media (max-width: 425px) {
+        margin-top: -300px;
+      }
+    }
+    .left3 {
+      height: 100vh;
+      position: absolute;
+      z-index: -1;
+    }
+    .right {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 1920px;
+      margin: auto;
+      padding-top: 100px;
+      .blockRight {
+        width: 60%;
+        max-width: 1920px;
+        // margin: auto;
+      }
+      .blockRight3 {
+        width: 50%;
+        @media (max-width: 1024px) {
+          width: 60%;
+        }
+        @media (max-width: 425px) {
+          width: 100%;
+        }
+      }
+    }
+    .right3 {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 1024px) {
+        padding-top: 0px;
+      }
+      .blockRight {
+        .contentHeadlineLogo {
+          img {
+            width: 240px;
+            height: 216px;
+            vertical-align: top;
+            margin-left: -10px;
+          }
+          h2 {
+            font-size: 3.5rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+          }
+        }
+      }
+    }
+  }
+  .wrapper2 {
+    height: 100%;
+    margin-bottom: 100px;
+    img{
+      width: 1060px;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+  .wrapper3 {
+    height: 100%;
+    margin-bottom: 100px;
+  }
+ 
+  //common
+  .textContent {
+    padding: 40px;
+    @media (max-width: 768px) {
+      padding: 40px;
+    }
+    .headLineInner {
+      font-size: 3.5rem;
+      margin-bottom: 40px;
+      max-width: 700px;
+      text-transform: uppercase;
+      color: #d99a78;
+      font-family: 'LouizeDisplay', sans-serif;
+      font-weight: 200;
+      letter-spacing: 0.3rem;
+      line-height: 1.4;
+      h2 {
+        font-weight: 300;
+        font-size: 3.5rem;
+        margin-bottom: 40px;
+        max-width: 700px;
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+          margin-bottom: 0px;
+        }
+        @media (max-width: 425px) {
+          font-size: 2rem;
+        }
+      }
+    }
+    .paraInner {
+      width: 50%;
+      float: right;
+      @media (max-width: 768px) {
+        width: 70%;
+        float: left;
+      }
+      @media (max-width: 425px) {
+        width: 100%;
+        float: left;
+      }
+      p {
+        margin-bottom: 20px;
+        max-width: 500px;
+        font-family: 'LouizeDisplay', sans-serif;
+
+        color: #ffffff;
+        line-height: 32px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 16px;
+        @media (max-width: 425px) {
+          line-height: 30px;
+          font-size: 15px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .paraInner2 {
+      float: left;
+      padding-bottom: 40px;
+    }
+    .paraInner3 {
+      width: 100%;
+    }
+  }
+  .imgBlock {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 58.3%;
+    overflow: hidden;
+    display: flex;
+    .imgBg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(170, 90, 59, 0.7);
+      }
+      img {
+        width: 100%;
+      }
+      .imgCite {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 0.5rem;
+        color: #fff;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .imgBlock2 {
+    padding-bottom: 133.3%;
+    .imgBg {
+      &::after {
+        background: rgba(26, 16, 10, 0.6);
+      }
+    }
+  }
+}

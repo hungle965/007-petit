@@ -1,0 +1,43 @@
+{
+  "name": "kopa-build",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "browser-sync": "^2.26.12",
+    "core-js": "^3.6.5",
+    "firebase-tools": "^8.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-format-html": "^1.2.5",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nunjucks": "^5.0.2",
+    "gulp-print": "^5.0.2",
+    "lodash": "^4.17.20",
+    "nunjucks": "^3.2.2",
+    "rollup": "^2.23.1"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 120
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

@@ -1,0 +1,273 @@
+@use '../vars';
+@use '../mixins';
+
+.navigation-header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 80px;
+  z-index: 9999;
+
+  .logo {
+    display: none;
+    @media screen and (min-width: 769px) {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 120px;
+      left: 20px;
+      @include mixins.transitionFor(0.4s, opacity);
+    }
+  }
+  
+  .hide {
+    opacity: 0;
+    @include mixins.transitionFor(0.4s, opacity);
+  }
+
+  #navigation_button {
+    position: absolute;
+    right: 0px;
+    background: rgba(105, 61, 42, 0.9);
+    z-index: 9999;
+    height: 100%;
+    width: 220px;
+    font-family: 'Louize', sans-serif;
+    backdrop-filter: blur(7px);
+
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: background-color 0.6s, cubic-bezier(0.645, 0.045, 0.355, 1);
+    @media only screen and (max-width: 425px) {
+      width: 100px;
+      background: none;
+      backdrop-filter: none;
+    }
+    .button-enquiry {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+
+      border-right: 1px solid #ff9464;
+      will-change: color;
+      transition: color 0.6s;
+      cursor: pointer;
+      &::after {
+        content: 'enquiry';
+      }
+      &:hover {
+        color: #d99a78;
+      }
+      @media only screen and (max-width: 425px) {
+        display: none;
+      }
+    }
+
+    .button-close {
+      &::after {
+        content: 'close';
+      }
+    }
+    @import './btnMainMenu';
+  }
+}
+
+.nav-inner {
+  position: absolute;
+  z-index: 1;
+  background: #190f0a;
+  transform: translateX(1400px);
+  top: 15vh;
+  height: 70vh;
+  right: 220px;
+  left: 130px;
+  display: flex;
+  justify-content: space-between;
+  &:after {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  @media only screen and (max-width: 1200px) {
+    top: 0px;
+    height: auto;
+    right: 0px;
+    left: 0px;
+    overflow: auto;
+    background: url('/img/site/home-masthead-02-a.jpg');
+    background-size: cover;
+    height: 100vh;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  #main_navigation {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+      left: -130px;
+    }
+    @media only screen and (max-width: 425px) {
+      position: relative;
+      left: 0px;
+      overflow-x: hidden;
+    }
+
+    ul {
+      padding-right: 200px;
+      @media only screen and (max-width: 768px) {
+        padding-right: 0px;
+      }
+    }
+
+    li {
+      font-family: vars.$font-sec;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 0.2rem;
+      width: 100%;
+      padding: 20px 0px;
+      position: relative;
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      justify-content: space-between;
+      padding-right: 10px;
+      cursor: pointer;
+
+      &:hover {
+        span::after {
+          opacity: 1;
+        }
+        span {
+          background: vars.$color-lightcopper;
+        }
+      }
+
+      a {
+        position: relative;
+        color: #a35f40;
+        text-decoration: none;
+        font-size: 1.25rem;
+        display: block;
+        padding-left: 40px;
+        padding-right: 40px;
+        cursor: pointer;
+        @include mixins.ani(0.3s);
+        &.active,
+        &:hover {
+          color: vars.$color-lightcopper;
+        }
+        &:hover {
+          @include mixins.ani(0.3s);
+        }
+      }
+      span {
+        position: relative;
+        background: #d99a78;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        display: inline-block;
+        top: 3px;
+        &::after {
+          content: '';
+          float: left;
+          position: absolute;
+          left: -10px;
+          top: -10px;
+          display: block;
+          height: 25px;
+          width: 25px;
+          opacity: 0;
+          background: url('../img/selected-btn.svg') center center no-repeat;
+          transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+        }
+      }
+    }
+    .menu-on & {
+      pointer-events: all;
+      @for $i from 1 through 6 {
+        ul li:nth-child(#{$i}n) {
+          opacity: 1;
+          transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-delay: #{$i * 0.25}s;
+        }
+      }
+    }
+  }
+
+  #sub_navigation {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 400px;
+
+    display: flex;
+    align-items: center;
+
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
+
+    .desktop-extras {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .header-logo {
+        position: relative;
+        top: -30px;
+        left: -140px;
+        @media only screen and (max-width: 1320px) {
+          left: 0px;
+          img {
+            width: 200px;
+          }
+        }
+      }
+      @import '../comps/cusLoadingIcon.scss';
+      .link-social {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+      @include mixins.ani(0.3s);
+      span {
+        font-family: vars.$font-sec;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: vars.$color-lightcopper;
+        font-size: 0.75rem;
+        letter-spacing: 0.2rem;
+        border-bottom: 1px solid vars.$color-lightcopper;
+        padding: 5px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+@use '../vars';
+@use '../mixins';
+.hero {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    .headLineContainer {
+      display: block;
+      position: relative;
+      z-index: 200;
+      height: 100vh;
+      padding-bottom: 80px;
+      .headLine {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        max-width: 1800px;
+        margin: auto;
+        height: calc(100% - 80px);
+        padding: 0 40px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .headLineTop {
+          box-sizing: border-box;
+          width: 50%;
+          display: flex;
+          align-items: center;
+          @media (max-width: 425px) {
+            width: 100%;
+          }
+          .logoMid {
+            height: 82px;
+            width: 300px;
+            background: url('/img/kopar-at-newton-logo-white.svg');
+            background-size: cover;
+            margin-bottom: 10px;
+            @media (max-width: 1280px) {
+              height: 68px;
+              width: 250px;
+            }
+            @media (max-width: 425px) {
+              width: 185px;
+              height: 50px;
+            }
+          }
+        }
+        .headLineMid {
+          width: 50%;
+          align-items: flex-end;
+          padding-bottom: 150px;
+          display: flex;
+          @media (max-width: 768px) {
+            padding-bottom: 0px;
+          }
+          @media (max-width: 425px) {
+            padding-bottom: 10px;
+          }
+          .headLineMidDinner {
+            font-size: 1.125rem;
+            max-width: 345px;
+            color: white;
+            @media (max-width: 425px) {
+              max-width: 225px;
+              font-size: 14px;
+            }
+            p {
+              font-family: 'LouizeDisplay', sans-serif;
+              font-weight: 500;
+              line-height: 1.4;
+              letter-spacing: 2px;
+            }
+          }
+          @media (max-width: 425px) {
+            padding-bottom: 10px;
+          }
+        }
+      }
+      .headLineBtn {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 0 40px;
+        @media (max-width: 375px) {
+          padding: 0 10px;
+        }
+        @import '../comps/cusLoadingIcon.scss';
+        .scrollDown {
+          width: 50%;
+        }
+        .timerBarContainer {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          @media (max-width: 1280px) {
+            display: none;
+          }
+          .btnContainer {
+            display: block;
+            width: 330px;
+            .ccBtnInner {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .ccBtn {
+                width: calc(100% / 3);
+                height: 40px;
+                margin-right: 40px;
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                span {
+                  height: 2px;
+                  width: 100%;
+                  background-color: #a35f40;
+                  float: left;
+                  position: absolute;
+                  left: 0px;
+                  top: 25px;
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: white;
+                    width: 0%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    @include mixins.transitionFor(0s, width)
+                  }
+                }
+                p {
+                  font-family: 'LouizeDisplay', sans-serif;
+                  font-weight: 500;
+                  line-height: 1.4;
+                  letter-spacing: 2px;
+                  color: #a35f40;
+                }
+              }
+              .active {
+                span::before {
+                  content: '';
+                  position: absolute;
+                  background-color: white;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  @include mixins.transitionFor(4s, width)
+                }
+                p {
+                  color: #ffffff;
+                }
+              }
+            }
+          }
+        }
+      }
+      .headLineVideoContainer {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+
+        width: 300px;
+        height: 120px;
+
+        background: #190f0a;
+        padding: 20px;
+
+        @media (max-width: 1280px) {
+          padding: 0px;
+          width: 150px;
+          height: 85px;
+        }
+
+        @media (max-width: 425px) {
+          top: calc(50% - 20px);
+        }
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .videoItem {
+          width: 150px;
+          height: 85px;
+          background-size: contain;
+          position: relative;
+          cursor: pointer;
+          &::after {
+            content: '';
+            background-color: rgba(163, 95, 64, 0.5);
+            position: absolute;
+            float: left;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+          .videoBg {
+            width: 100%;
+            height: 100%;
+            .videoFill {
+              width: 100%;
+            }
+          }
+
+          &::before {
+            content: '';
+            background: url('/img/play-icon.svg') center center no-repeat;
+            position: absolute;
+            float: left;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+        }
+        .videoText {
+          display: inline-block;
+          color: #ffffff;
+          letter-spacing: 3px;
+          font-weight: 300;
+          padding-left: 20px;
+          width: 200px;
+          font-size: 0.75rem;
+          line-height: 1.4;
+          @media (max-width: 1280px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

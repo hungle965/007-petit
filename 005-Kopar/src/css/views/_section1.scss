@@ -1,0 +1,6 @@
+.section1 {
+  margin-top: 150px;
+  @media (max-width: 425px) {
+    margin-top: 0px;
+  }
+}

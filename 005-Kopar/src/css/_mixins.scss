@@ -1,0 +1,94 @@
+@use 'sass:list';
+
+@mixin coverall() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Background Image, centered cover
+@mixin bgimage() {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+// Flex Center - center an element
+@mixin flexcenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Animation mixin - compiled with 2 variables, time and easing
+@mixin ani($time, $easing: 'linear') {
+  $e: cubic-bezier(0.47, 0, 0.745, 0.715);
+  @if $easing == 'back' {
+    $e: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  } @else if $easing == 'quad' {
+    $e: cubic-bezier(0.165, 0.84, 0.44, 1);
+  } @else if $easing == 'cubic' {
+    $e: cubic-bezier(0.47, 0, 0.745, 0.715);
+  } @else if $easing == 'cubic-inout' {
+    $e: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  transition: all $time $e;
+}
+
+// Clear Div
+@mixin cleardiv() {
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+// Mixins for breakpoints
+@mixin mobileLandscape() {
+  @media (max-width: 820px) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin tabletPortraitUp() {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tabletLandscapeUp() {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop1025Up() {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+@mixin desktop1281Up() {
+  @media (min-width: 1281px) {
+    @content;
+  }
+}
+@mixin desktop1921Up() {
+  @media (min-width: 1921px) {
+    @content;
+  }
+}
+
+@mixin transitionFor($trans, $props...) {
+  @if length($props) == 0 {
+    transition: $trans;
+    will-change: list.nth($trans, 1);
+  } @else if length($props) == 1 {
+    transition: $props $trans;
+    will-change: $props;
+  } @else {
+    transition: $trans;
+    transition-property: $props;
+    will-change: $props;
+  }
+}

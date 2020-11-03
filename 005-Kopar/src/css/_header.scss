@@ -1,0 +1,82 @@
+@import './ext/select2.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  .nav_video {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: none;
+    object-fit: cover;
+
+    @media only screen and (max-width: 1330px) {
+      display: none;
+      opacity: 0;
+    }
+  }
+  @import 'comps/forms';
+  @import 'comps/nav';
+}
+
+.mobileHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 9999;
+  display: none;
+  @import './comps/navMobile';
+  @media only screen and (max-width: 425px) {
+    display: block;
+  }
+}
+
+.enquireButton {
+  position: fixed;
+  display: none;
+  z-index: 99999;
+  height: 50px;
+  width: 100%;
+  background: rgba(105, 61, 42, 0.9);
+  top: calc(100vh - 50px);
+  align-items: center;
+  @media only screen and (max-width: 425px) {
+    display: flex;
+  }
+  &::after {
+    content: 'enquiry';
+    text-transform: uppercase;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.15rem;
+    font-size: 0.75rem;
+    color: white;
+    font-family: 'LouizeDisplay', sans-serif;
+  }
+}
+
+.enquireClose {
+  animation: light 0.2s;
+  &::after {
+    content: 'close';
+  }
+}
+
+@keyframes light {
+  from {
+    background: gray;
+  }
+  to {
+    background: rgba(105, 61, 42, 0.9);
+  }
+}

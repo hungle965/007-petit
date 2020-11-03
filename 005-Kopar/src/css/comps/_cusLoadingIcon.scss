@@ -1,0 +1,30 @@
+.cus-loading-icon {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  cursor: pointer;
+  position: relative;
+  @media only screen and (max-width: 1320px) {
+    left: 20px;
+  }
+
+  &:hover {
+    .icon-text {
+      color: white;
+    }
+  }
+  .icon-text {
+    color: #e8ad80;
+    letter-spacing: 3px;
+    font-weight: 300;
+    padding-left: 10px;
+    font-size: 0.75rem;
+    padding-top: 3px;
+    transition: all 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -50px;
+  }
+}

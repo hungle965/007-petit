@@ -1,0 +1,27 @@
+@use '../vars';
+@use '../mixins';
+
+.formfield-checkbox {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  position: absolute;
+  left: 0px;
+  top: 64px;
+  float: left;
+  margin: 0px;
+  box-sizing: border-box;
+  border: 1px solid vars.$color-lightcopper;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+  @include mixins.ani(0.1s);
+
+  &:checked {
+    background: url('/img/checkbox-arrow.svg') center center no-repeat;
+    background-size: 9px 6px;
+  }
+  &.form-err {
+    border: 1px solid red;
+  }
+}

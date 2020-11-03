@@ -1,0 +1,26 @@
+@use '../vars' as *;
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent;
+  border: 1px solid $color-lightcopper;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  background-color: $color-lightcopper;
+  color: $color-blackcopper;
+  &:focus {
+    outline: none;
+  }
+}
+.select2-search--dropdown {
+  background-color: $color-blackcopper;
+}
+.select2-container--open .select2-dropdown--above {
+  border: 1px solid $color-lightcopper;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
