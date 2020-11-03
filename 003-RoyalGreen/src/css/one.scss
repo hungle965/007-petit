@@ -1,0 +1,219 @@
+.one {
+  width: 100%;
+  height: 600px;
+  position: relative;
+
+  @media (min-width: 600px) {
+    height: 100vh;
+  }
+
+  .imgBG {
+    &::before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      float: left;
+      top: 0px;
+      left: 0px;
+      content: "";
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .masthead {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .mastheadImage {
+      position: relative;
+      width: 100%;
+      height: 330px;
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+
+      @media (min-width: 600px) {
+        height: 100%;
+      }
+    }
+
+    .mastheadText {
+      width: 100%;
+      height: 45%;
+      bottom: 0px;
+      position: absolute;
+      background: #23462b;
+      z-index: 2;
+
+      @media (min-width: 600px) {
+        background: transparent;
+        height: 100%;
+      }
+
+      .headlineinner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 1.5s;
+
+        .headlineinnerText {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          opacity: 0;
+        
+
+          .subheadline {
+            padding-top: 10px;
+
+            @media (min-width: 900px) {
+              text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            span {
+              font-family: ivymode, sans-serif;
+              color: #e8ad80;
+              letter-spacing: 0.15rem;
+
+              @media (min-width: 600px) {
+                font-size: 1rem;
+              }
+
+              @media (min-width: 1025px) {
+                font-size: 1rem;
+              }
+
+              @media (min-width: 1281px) {
+                font-size: 1.25rem;
+              }
+            }
+          }
+
+          .headline {
+            @media (min-width: 900px) {
+              text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            h1 {
+              color: #ffffff;
+              font-size: 1.5rem;
+              text-align: center;
+              max-width: 400px;
+              padding: 0 20px;
+
+              @media (min-width: 600px) {
+                font-size: 2rem;
+                max-width: initial;
+              }
+
+              @media (min-width: 1025px) {
+                font-size: 2.5rem;
+                max-width: initial;
+              }
+
+              @media (min-width: 1281px) {
+                font-size: 2.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .scrolldownBar {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 1;
+      display: none;
+      transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media (min-width: 600px) {
+        display: block;
+      }
+
+      .scrolldownInner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+
+        .scrolldownLine {
+          position: relative;
+          margin-bottom: 20px;
+          width: 0.5px;
+          height: 50px;
+          background-color: rgba(255, 255, 255, 0.5);
+
+          &::before {
+            content: "";
+            height: 50px;
+            width: 1px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #fff;
+            animation: mhl 3s infinite;
+            animation-delay: 0.5s;
+            z-index: 1;
+
+            @keyframes mhl {
+              0% {
+                height: 0px;
+                transform: translateY(0px);
+              }
+              50% {
+                height: 50px;
+                transform: translateY(0px);
+              }
+              65% {
+                height: 50px;
+                transform: translateY(0px);
+              }
+              100% {
+                height: 0px;
+                transform: translateY(50px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.appear {
+  transition: all 1s;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+
+    @media (min-width: 500px) {
+      background: rgba(0, 0, 0, 0);
+      z-index: 1;
+    }
+  }
+
+  .headlineinnerText {
+    opacity: 1 !important;
+    transition: all 1s;
+  }
+}

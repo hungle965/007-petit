@@ -1,0 +1,169 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * astoria:
+ *   - http://typekit.com/eulas/00000000000000003b9b397b
+ *   - http://typekit.com/eulas/00000000000000003b9b3978
+ *   - http://typekit.com/eulas/00000000000000003b9b397d
+ * ivymode:
+ *   - http://typekit.com/eulas/00000000000000003b9b33c8
+ *   - http://typekit.com/eulas/00000000000000003b9b33c9
+ * linotype-didot:
+ *   - http://typekit.com/eulas/00000000000000003b9b22f8
+ *   - http://typekit.com/eulas/00000000000000003b9b22f9
+ *   - http://typekit.com/eulas/00000000000000003b9b22ee
+ *   - http://typekit.com/eulas/00000000000000003b9b22ed
+ * linotype-didot-headline:
+ *   - http://typekit.com/eulas/00000000000000003b9b22ec
+ *
+ * © 2009-2020 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2019-09-20 06:36:43 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=sbb5bkw&ht=tk&f=39437.39433.39434.39435.39436.25791.25793.25797.42533.42534&a=14272402&app=typekit&e=css");
+
+@font-face {
+  font-family: "linotype-didot-headline";
+  src: url("https://use.typekit.net/af/83794c/00000000000000003b9b22ec/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/83794c/00000000000000003b9b22ec/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/83794c/00000000000000003b9b22ec/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "linotype-didot";
+  src: url("https://use.typekit.net/af/18c873/00000000000000003b9b22f8/27/l?subset_id=2&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/18c873/00000000000000003b9b22f8/27/d?subset_id=2&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/18c873/00000000000000003b9b22f8/27/a?subset_id=2&fvd=n7&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "linotype-didot";
+  src: url("https://use.typekit.net/af/0f6052/00000000000000003b9b22f9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0f6052/00000000000000003b9b22f9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0f6052/00000000000000003b9b22f9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "linotype-didot";
+  src: url("https://use.typekit.net/af/5e526d/00000000000000003b9b22ee/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/5e526d/00000000000000003b9b22ee/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/5e526d/00000000000000003b9b22ee/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "linotype-didot";
+  src: url("https://use.typekit.net/af/3d6ac8/00000000000000003b9b22ed/27/l?subset_id=2&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/3d6ac8/00000000000000003b9b22ed/27/d?subset_id=2&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/3d6ac8/00000000000000003b9b22ed/27/a?subset_id=2&fvd=n4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "astoria";
+  src: url("https://use.typekit.net/af/6420f9/00000000000000003b9b397b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/6420f9/00000000000000003b9b397b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/6420f9/00000000000000003b9b397b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "astoria";
+  src: url("https://use.typekit.net/af/0fe70c/00000000000000003b9b3978/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0fe70c/00000000000000003b9b3978/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0fe70c/00000000000000003b9b3978/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "astoria";
+  src: url("https://use.typekit.net/af/09941c/00000000000000003b9b397d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/09941c/00000000000000003b9b397d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/09941c/00000000000000003b9b397d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ivymode";
+  src: url("https://use.typekit.net/af/d86eb5/00000000000000003b9b33c8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/d86eb5/00000000000000003b9b33c8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/d86eb5/00000000000000003b9b33c8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "ivymode";
+  src: url("https://use.typekit.net/af/4aaea0/00000000000000003b9b33c9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/4aaea0/00000000000000003b9b33c9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/4aaea0/00000000000000003b9b33c9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tk-linotype-didot-headline {
+  font-family: "linotype-didot-headline", serif;
+}
+.tk-linotype-didot {
+  font-family: "linotype-didot", serif;
+}
+.tk-astoria {
+  font-family: "astoria", sans-serif;
+}
+.tk-ivymode {
+  font-family: "ivymode", sans-serif;
+}

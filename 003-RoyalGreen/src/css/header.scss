@@ -1,0 +1,622 @@
+.header {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    float: left;
+    top: 0px;
+    left: 0px;
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    .headerLogo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      height: 130px;
+      width: 100%;
+      z-index: 1;
+      transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media (min-width: 600px) {
+        justify-content: flex-end;
+        background: transparent;
+      }
+
+      @media (min-width: 1281px) {
+        height: 200px;
+      }
+
+      .logo {
+        position: relative;
+        z-index: 10;
+        width: 160px;
+        opacity: 0;
+        display: none;
+        transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        @media (min-width: 900px) {
+          display: block;
+        }
+
+        @media (min-width: 1281px) {
+          width: 240px;
+        }
+
+        a {
+          margin: 0;
+          padding: 0;
+          font-size: 100%;
+          vertical-align: baseline;
+          background: transparent;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.headerNavigation {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  @media (min-width: 900px) {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+  }
+
+  .navigationPanel {
+    position: absolute;
+    float: left;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 210px;
+    background: url(../img/navi-blur.jpg) center center no-repeat;
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-delay: 0.6s;
+
+    @media (min-width: 900px) {
+      padding-top: 270px;
+      padding-top: calc(45vh - 6%);
+    }
+
+    @media (max-width: 500px) {
+      overflow: scroll;
+    }
+
+    .navpanelText {
+      @media (min-width: 900px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 1400px;
+        transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .textLeft {
+        display: none;
+
+        @media (min-width: 900px) {
+          display: block;
+          color: #fff;
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          opacity: 0;
+          // max-width: 400px;
+          transform: translateY(-20px);
+          transition: all 0.5s;
+          margin-top: -70px;
+        }
+
+        .textQuote {
+          @media (min-width: 900px) {
+            text-align: center;
+
+            blockquote {
+              font-size: 2rem;
+              font-family: linotype-didot, serif;
+              line-height: 1.4;
+              padding-left: 50px;
+              padding-right: 50px;
+              font-weight: 400;
+              letter-spacing: 0.1rem;
+              font-family: linotype-didot, serif;
+              font-weight: 400;
+              font-style: normal;
+              padding-top: 0px;
+
+              q {
+                quotes: none;
+              }
+
+              span {
+                @media (min-width: 900px) {
+                  font-family: linotype-didot, serif;
+                  font-style: italic;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+          .citeIcon {
+            @media (min-width: 900px) {
+              padding-bottom: 30px;
+            }
+          }
+
+          cite {
+            @media (min-width: 900px) {
+              font-size: 0.875rem;
+              font-family: linotype-didot, serif;
+              font-style: italic;
+            }
+          }
+        }
+      }
+
+      .divider {
+        position: absolute;
+        height: 0;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: height 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+          opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition-delay: 1s;
+        top: 0px;
+        left: 50%;
+
+        @media (min-width: 900px) {
+          height: 90%;
+        }
+      }
+
+      .textRight {
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+          opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.5s;
+
+        @media (min-width: 900px) {
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media (min-width: 500px) and (max-width: 800px) {
+          position: absolute;
+          right: -150px;
+          top: 70px;
+        }
+
+        // @media (max-width: 800px) {
+        //   padding-right: 5%;
+        // }
+
+        @media (max-width: 500px) {
+          padding-right: 12%;
+        }
+
+        .mainNavigation {
+          ul {
+            list-style: none;
+            position: relative;
+
+            li {
+              font-family: ivymode, sans-serif;
+              width: 100%;
+              padding: 15px 0px;
+              position: relative;
+
+              @media (min-width: 500px) and (max-width: 800px) {
+                padding: 5px 0px;
+              }
+
+              a {
+                position: relative;
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 1.5rem;
+                letter-spacing: 0.15rem;
+                display: block;
+                text-align: center;
+                padding-left: 60px;
+                padding-right: 60px;
+                transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+                @media (max-width: 800px) {
+                  font-size: 1.25rem;
+                }
+
+                @media (max-width: 500px) {
+                  font-size: 1.05rem;
+                }
+
+                &:hover {
+                  color: #e8ad80;
+                }
+
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 60px;
+                  height: 1px;
+                  background-color: #e8ad80;
+                  position: absolute;
+                  top: 50%;
+                  opacity: 0;
+                  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+                  left: 150px;
+                  transform: translateX(-15px);
+                }
+
+                &:hover::before {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+
+                &::after {
+                  content: "";
+                  display: block;
+                  width: 60px;
+                  height: 1px;
+                  background-color: #e8ad80;
+                  position: absolute;
+                  top: 50%;
+                  opacity: 0;
+                  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+                  right: 150px;
+                  transform: translateX(15px);
+                }
+
+                &:hover::after {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+              }
+            }
+          }
+        }
+
+        .subNavigation {
+          @media (min-width: 900px) {
+            padding-bottom: 40px;
+          }
+
+          ul {
+            list-style: none;
+            position: relative;
+
+            li {
+              font-family: ivymode, sans-serif;
+              letter-spacing: 0.1rem;
+              width: 100%;
+              padding: 15px 0px;
+              position: relative;
+
+              a {
+                position: relative;
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 0.75rem;
+                display: block;
+                text-align: center;
+                transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+                &:hover {
+                  color: #e8ad80;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .OpenMenu {
+    opacity: 1;
+    pointer-events: stroke;
+    position: fixed;
+
+    .navpanelText {
+      .textLeft {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 2.5s;
+      }
+
+      .textRight {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 2.5s;
+
+        @media (max-width: 900px) {
+          transform: translateY(15px);
+          transition-delay: 1.5s;
+        }
+      }
+    }
+  }
+}
+
+.headerButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  @media (min-width: 900px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 105px;
+    width: 280px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    z-index: 1000;
+    color: #fff;
+
+    padding: 0 45px;
+  }
+
+  @media (max-width: 900px) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+
+    &::before {
+      width: 100%;
+      height: 70px;
+      content: "";
+      background: #2d4e34;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+  }
+
+  .buttonEnquire {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    z-index: 54;
+    font-size: 0.813rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: ivymode, sans-serif;
+
+    &:hover {
+      color: #34b351;
+    }
+  }
+
+  @media (max-width: 900px) {
+    color: #fff;
+  }
+
+  .navbcDivider {
+    width: 1px;
+    height: 39px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0px 20px;
+    display: none;
+    z-index: 54;
+
+    @media (min-width: 900px) {
+      display: block;
+    }
+  }
+
+  .buttonMainMenu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 54;
+
+    @media (min-width: 1281px) {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transform: translate(0px, 13px);
+      transition: 0.3s;
+    }
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transform: translate(0px, 20px);
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      width: 40px;
+      transition: 0.3s;
+    }
+  }
+}
+
+.topButton {
+  top: 0;
+  position: fixed;
+
+  &::before {
+    height: 0px;
+  }
+
+  .buttonMainMenu {
+    &::before {
+      transform: translate(0px, 15px) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(0px, 15px) rotate(45deg);
+      width: 40px;
+    }
+  }
+}
+
+.navigationLogo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12px;
+  transition: all 0.4s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+  @media (min-width: 900px) {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 80px;
+    width: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  .naviLogoContainer {
+    @media (min-width: 900px) {
+      top: 0px;
+    }
+
+    .naviLogo {
+      background: url(../img/royalgreen-logo.svg) top center no-repeat;
+      background-size: 160px auto;
+      height: 50px;
+      overflow: hidden;
+      transform: scale(0.9);
+      transition: all 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+      transform-origin: top;
+
+      @media (min-width: 900px) {
+        height: 75px;
+        transform: scale(1.65);
+      }
+
+      // @media (min-width: 900px) {
+      //   transform: scale(1.4);
+      //   opacity: 0;
+      //   pointer-events: none;
+      // }
+
+      @media (min-width: 900px) {
+        transform: scale(1.4);
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      @media (max-width: 900px) {
+        width: 160px;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        float: left;
+        top: 0px;
+        left: 0px;
+      }
+    }
+
+    .logoSlogan {
+      opacity: 0;
+      pointer-events: none;
+      width: 300px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(5px);
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.1rem;
+      color: #e8ad80;
+      transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      @media (min-width: 900px) {
+        font-size: 1rem;
+        transform: translateX(-50%) translateY(40px);
+      }
+    }
+  }
+}
+
+.opaLogo {
+  opacity: 1;
+  transition-delay: 1.5s;
+  position: fixed;
+
+  @media (max-width: 900px) {
+    top: 90px;
+    transition-delay: 0.5s;
+  }
+
+  @media (min-width: 500px) and (max-width: 800px) {
+    transform: translateX(-300px);
+    top: 150px;
+  }
+
+  .naviLogoContainer {
+    .naviLogo {
+      @media (max-width: 900px) {
+        height: 74px;
+        transition-delay: 0.5s;
+      }
+    }
+
+    .logoSlogan {
+      opacity: 1;
+      transform: translateX(-50%) translateY(20px);
+      transition-delay: 1s;
+
+      @media (min-width: 900px) {
+        transform: translateX(-50%) translateY(60px);
+        transition-delay: 2s;
+      }
+    }
+  }
+}
+
+.appear {
+  .logo {
+    opacity: 1 !important;
+  }
+}
+
+.buttonSticky {
+  position: fixed;
+  top: 0;
+}

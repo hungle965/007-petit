@@ -1,0 +1,185 @@
+.two {
+  width: 100%;
+  position: relative;
+
+  @media (min-width: 900px) {
+    margin-top: 0;
+  }
+
+  .baseImage {
+    @media (min-width: 900px) {
+      background: url(../img/navi-blur.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      float: left;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+    }
+  }
+
+  .wrapper {
+    display: block;
+    z-index: 2;
+    position: relative;
+    max-width: 1670px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 900px) {
+      display: flex;
+    }
+
+    .contentLeft {
+      @media (min-width: 900px) {
+        width: 50%;
+        background: none;
+        padding-left: 30px;
+        padding-bottom: 100px;
+        transform: translate3d(0px, 15px, 0px);
+      }
+
+      @media (min-width: 1281px) {
+        padding-left: 60px;
+      }
+
+      .noname {
+        position: relative;
+        transition: all 0.5s;
+        transform: translateY(20px);
+        opacity: 0;
+
+        .imgbg1 {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
+
+        .imgCite {
+          float: left;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          font-size: 0.5rem;
+          color: #fff;
+
+          @media (min-width: 900px) {
+            right: 15px;
+          }
+        }
+      }
+    }
+
+    .contentRight {
+      background: url(../img/navi-blur.jpg) center center no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      padding: 40px 30px 70px 30px;
+      text-align: center;
+
+      h2 {
+        color: #fff;
+      }
+
+      @media (min-width: 900px) {
+        width: 50%;
+        background: none;
+        display: flex;
+        align-items: center;
+      }
+
+      @media (min-width: 1281px) {
+        padding-left: 60px;
+      }
+
+      .textContent {
+        position: relative;
+        opacity: 0;
+        transform: translateY(20px);
+
+        h2 {
+          font-size: 1.125rem;
+          font-family: ivymode, sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+          margin-bottom: 30px;
+          text-align: center;
+
+          @media (min-width: 900px) {
+            text-align: left;
+          }
+        }
+
+        .textInner {
+          text-align: center;
+
+          @media (min-width: 900px) {
+            text-align: left;
+          }
+
+          @media (min-width: 1281px) {
+            max-width: 500px;
+          }
+
+          p {
+            color: #e8ad80;
+            background: -webkit-linear-gradient(
+              310deg,
+              #e8ad80,
+              #f7d1b4,
+              #e8ad80
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: ivymode, sans-serif;
+            font-size: 1.625rem;
+            margin-bottom: 40px;
+            letter-spacing: 0.125rem;
+            line-height: 1.6;
+            font-weight: 300;
+
+            @media (min-width: 1281px) {
+              font-size: calc(1.625rem + 10 * ((100vw - 1281px) / 640));
+            }
+          }
+        }
+
+        .aniAnchor {
+          width: 3px;
+          height: 65%;
+          position: absolute;
+          top: 12.5%;
+          left: 10px;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.appear {
+  .wrapper {
+    .contentLeft {
+      .noname {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s;
+      }
+    }
+    .contentRight {
+      .textContent {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s;
+      }
+    }
+  }
+}

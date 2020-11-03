@@ -1,0 +1,26 @@
+{
+  "name": "pboom-royagreen-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "babel": "^6.23.0",
+    "browser-sync": "^2.26.13",
+    "firebase-tools": "^8.12.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-format-html": "^1.2.5",
+    "gulp-imagemin": "^7.1.0",
+    "rollup": "^2.32.0"
+  }
+}

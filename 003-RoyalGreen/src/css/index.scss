@@ -1,0 +1,259 @@
+@use 'header.scss';
+@use 'main.scss';
+@use 'one.scss';
+@use 'two.scss';
+@use 'three.scss';
+@use 'four.scss';
+@use 'five.scss';
+@use 'six.scss';
+@use 'contact.scss';
+@use 'footer.scss';
+@use 'cta-bar.scss';
+@use './fonts.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  font-family: astoria, sans-serif;
+  background-color: #23462b;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: ivymode, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+}
+
+.imgBlock {
+  position: relative;
+}
+
+.imgBlockType1 {
+  width: 235px;
+  max-width: 364px;
+  height: 271px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+
+  @media (min-width: 900px) {
+    float: left;
+    position: absolute;
+    width: 200px;
+    height: 230px;
+  }
+
+  @media (min-width: 900px) {
+    bottom: -115px;
+    right: 120px;
+  }
+
+  @media (min-width: 1281px) {
+    bottom: -176px;
+    right: 12%;
+    width: 305px;
+    height: 352px;
+  }
+}
+
+.imgBlockType2 {
+  margin-bottom: 50px;
+
+  @media (min-width: 900px) {
+    width: 50%;
+  }
+}
+
+.blockBG {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 73.8%;
+  overflow: hidden;
+  position: relative;
+
+  @media (min-width: 900px) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    float: left;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.imgCite {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 0.5rem;
+  color: #fff;
+
+  @media (min-width: 900px) {
+    right: 15px;
+  }
+}
+
+.aniAnchor {
+  width: 3px;
+  height: 65%;
+  position: absolute;
+  top: 12.5%;
+  left: 10px;
+  pointer-events: none;
+}
+
+.imgBG {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.contentBlock {
+  @media (min-width: 900px) {
+    float: left;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    transform: translateY(20px);
+
+    .mobileBGgreen {
+      background: #23462b;
+      color: #fff;
+      padding: 40px 30px 60px 30px;
+
+      @media (min-width: 1281px) {
+        padding-left: 60px;
+      }
+
+      @media (min-width: 900px) {
+        background: none;
+      }
+    }
+  }
+}
+.sectionTextContent {
+  position: relative;
+
+  @media (min-width: 900px) {
+    max-width: 600px;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-family: ivymode, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media (min-width: 900px) {
+      text-align: left;
+    }
+  }
+
+  .sectionTextInner {
+    text-align: center;
+
+    @media (min-width: 900px) {
+      text-align: left;
+    }
+
+    .quote {
+      font-family: ivymode, sans-serif;
+      font-size: 1.625rem;
+      margin-bottom: 40px;
+      letter-spacing: 0.125rem;
+      line-height: 1.6;
+      font-weight: 300;
+
+      @media (min-width: 1281px) {
+        font-size: calc(1.625rem + 10 * ((100vw - 1280px) / 640));
+      }
+    }
+
+    .buttonLine {
+      font-size: 0.875rem;
+      font-family: ivymode, sans-serif;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      display: inline-block;
+      padding-top: 40px;
+      position: relative;
+
+      @media (min-width: 900px) {
+        padding-top: 0px;
+        padding-left: 70px;
+      }
+
+      &::before {
+        width: 60px;
+        float: left;
+        position: absolute;
+        height: 1px;
+        background-color: #fff;
+        content: "";
+        top: 0px;
+        left: calc(50% - 30px);
+
+        @media (min-width: 900px) {
+          top: 6px;
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+
+.appear {
+  .contentBlock {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s;
+  }
+}
+
+.mobileBGgreen {
+  background: #23462b;
+  color: #fff;
+  padding: 40px 30px 60px 30px;
+}
+
+.parallaxOff {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.rellax {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
