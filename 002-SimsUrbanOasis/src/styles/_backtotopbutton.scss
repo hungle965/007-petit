@@ -1,0 +1,28 @@
+.backToTop {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #a29061;
+  font-family: "Calibri W01 Regular_904604";
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: 0.125em;
+  color: #fff;
+  z-index: 100;
+  transition: 0.5s;
+
+  i {
+    margin-left: 5px;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+
+  &:hover {
+      color: black;
+  }
+}

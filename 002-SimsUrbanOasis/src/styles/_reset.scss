@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0l;
+}
+h6 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,183 @@
+.footer {
+  .wrapper {
+    width: 100%;
+    height: 180px;
+    background-color: #c1b186;
+    padding: 90px 0 40px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 1000px) {
+      justify-content: space-between;
+      height: 100px;
+      padding: 20px 10px 20px;
+    }
+
+    .backToTop {
+      width: 100%;
+      left: 0;
+      height: 40px;
+      position: absolute;
+      top: -40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #a29061;
+      font-family: "Calibri W01 Regular_904604";
+      text-transform: uppercase;
+      font-size: 0.875em;
+      letter-spacing: 0.125em;
+      color: #fff;
+      transition: 0.5s;
+      z-index: 1;
+
+      i {
+        margin-left: 5px;
+      }
+
+      @media (min-width: 700px) {
+        display: none;
+      }
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .footerMobile {
+      display: none;
+      position: absolute;
+      top: -0;
+
+      @media (max-width: 1000px) {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: #515151;
+        font-family: "Calibri W01 Regular_904604";
+        padding: 0;
+      }
+
+      .buttonCallus {
+        width: 100%;
+        height: 100%;
+        border-right: 1px solid #fff;
+        padding-top: 25px;
+        cursor: pointer;
+      }
+
+      .buttonEnquiry {
+        width: 100%;
+        cursor: pointer;
+      }
+
+      i {
+        color: #fff;
+        margin-right: 10px;
+      }
+    }
+
+    .footerLogo {
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: 1000px) {
+        text-align: center;
+      }
+
+      @media (max-width: 450px) {
+        margin-top: 20px;
+      }
+
+      img {
+        width: 200px;
+        height: 70px;
+      }
+    }
+
+    .contact {
+      display: none;
+
+      @media (min-width: 1000px) {
+        display: block;
+        width: 100%;
+        min-width: 480px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .contactTop {
+        width: 100%;
+        height: 100%;
+      }
+
+      .lineWidth {
+        width: 100%;
+        margin: 5px 0px;
+        border-top: 1px solid rgb(82, 81, 81);
+      }
+
+      .contactBottom {
+        width: 100%;
+        height: 100%;
+
+        a {
+          font-size: 10px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(82, 81, 81);
+        font-size: 12px;
+        transition: 0.2s;
+
+        &:hover {
+          color: rgb(148, 114, 20);
+        }
+      }
+
+      span {
+        color: #777b7c;
+        margin: 0 7px;
+        font-size: 11px;
+      }
+    }
+
+    .footerIcon {
+      display: none;
+
+      @media (min-width: 1000px) {
+        display: block;
+        width: 100%;
+        text-align: right;
+      }
+
+      span {
+        color: #5d6265;
+        font-size: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(82, 81, 81);
+        font-size: 12px;
+        transition: 0.2s;
+        margin: 0 5px;
+      }
+
+      .svggreen {
+        transition: 0.2s;
+        &:hover {
+          fill: #a29061 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@mixin transitionFor($trans, $props...) {
+  @if length($props) == 0 {
+    transition: $trans;
+    will-change: list.nth($trans, 1);
+  } @else if length($props) == 1 {
+    transition: $props $trans;
+    will-change: $props;
+  } @else {
+    transition: $trans;
+    transition-property: $props;
+    will-change: $props;
+  }
+}

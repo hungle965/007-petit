@@ -1,0 +1,23 @@
+@use "./styles/var" as *;
+@import "./styles/reset";
+@import "./styles/font.scss";
+@import "./styles/pages/home/secTwo.scss";
+@import "./styles/cta-bar.scss";
+@import "./styles/pages/_design.scss";
+@import "./styles/backtotopbutton";
+
+body {
+  @import "./styles/layout/header";
+  @import "./styles/layout/_headermain.scss";
+  font-family: "Calibri W01 Light", Arial;
+  color: $white;
+  line-height: 1.4;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  .main {
+    @import "./styles/main";
+  }
+  @import "./styles/layout/footer";
+}
+

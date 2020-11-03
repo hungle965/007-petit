@@ -1,0 +1,98 @@
+{% extends 'templates/_layout.html' %}
+{% block main %}
+{% include './templates/layout/_header.html' %}
+<section class="hero heroEnquiry">
+    <div class="wrapper">
+        <div class="logoHero">
+            <a href="index.html">
+                <img src="./img/assets/logo-suo-hero.svg" alt="">
+            </a>
+        </div>
+        <div class="dividerLine"></div>
+    </div>
+</section>
+
+<section class="secTwoPage">
+    <div class="wrapper">
+        <div class="headline">
+            <div class="titlePage">Enquiry</div>
+            <div class="pageText">
+                We are pleased to assist you with your enquiries and feedback. Kindly complete and submit the enquiry
+                form below.
+                <br>
+                <br>
+                <br>
+                <div class="titlePage">
+                    Call Us +65 6225 9000
+                </div>
+                <br>
+                Visit Sims Urban Oasis at 6 Sims Drive, Singapore 387388
+            </div>
+        </div>
+    </div>
+
+    <form id="enquiry_form">
+        <div class="formContainer">
+            <div class="formElement">
+                <label for="">Family name</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="formElement">
+                <label for="">Given name</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="formElement">
+                <label for="">Contact No.</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="formElement">
+                <label for="">email address</label>
+                <input type="email" name="" id="">
+            </div>
+            <div class="formElement">
+                <label for="">address</label>
+                <textarea name="" id=""></textarea>
+            </div>
+            <div class="formElement">
+                <label for="">remark</label>
+                <textarea name="" id=""></textarea>
+            </div>
+
+            <div class="formElementFull">
+                <div class="Left">
+                    <input type="checkbox">
+                </div>
+                <div class="right">
+                    * By Submitting an enquiry, you agree to Guocoland Group's
+                    <a href="#">Disclaimer and Privacy Policy.</a>
+                </div>
+            </div>
+            <div class="formElementFullTwo">
+                I agree to receive information and updates via
+                <div class="formsubadd">
+                    <input type="checkbox">
+                    Phone
+                </div>
+                <div class="formsubadd">
+                    <input type="checkbox">
+                    SMS
+                </div>
+                <div class="formsubadd">
+                    <input type="checkbox">
+                    Email
+                </div>
+                <div class="formsubadd">
+                    <input type="checkbox">
+                    Post Mail
+                </div>
+            </div>
+            <div class="formsubmit">
+                <input type="submit" value="SUBMIT  ">
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<cta-bar></cta-bar>
+{% endblock%}
