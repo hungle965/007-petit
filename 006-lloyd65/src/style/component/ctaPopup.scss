@@ -1,0 +1,103 @@
+@use '../var' as *;
+@use '../mix';
+
+.ctaPopUp {
+  position: fixed;
+  z-index: 10;
+  color: white;
+  bottom: 80px;
+  left: 24px;
+  background-color: rgba(26, 32, 38, 0.8);
+  padding: 5px;
+  border-radius: 4px;
+
+  width: 40px;
+  height: 40px;
+  @include mix.transitionFor(0.5s, bottom);
+
+  .icon {
+    display: block;
+    width: 100%;
+    transform-origin: top;
+    animation: ring 4s infinite;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @keyframes ring {
+    0% {
+      transform: rotate(20deg);
+    }
+    3% {
+      transform: rotate(-15deg);
+    }
+    9% {
+      transform: rotate(10deg);
+    }
+    12% {
+      transform: rotate(-5deg);
+    }
+    15%,
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  &.down {
+    bottom: 20px;
+    @include mix.transitionFor(0.5s, bottom);
+    @media screen and (min-width: 768px) {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+    padding: 10px;
+
+    left: unset;
+    top: unset;
+    bottom: 0;
+    z-index: 3;
+
+    background-color: rgb(49, 60, 70, 0.8);
+  }
+
+  > .wrapper {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid: 'c1 c2 c3' 1fr;
+      gap: 10px;
+      align-self: center;
+
+      > img {
+        grid-area: c1;
+        margin: auto;
+      }
+
+      > span {
+        grid-area: c2;
+        margin: auto;
+      }
+
+      > .ctaBtn {
+        grid-area: c3;
+        border: 1px solid #bbbbbb;
+        padding: 5px 10px;
+        cursor: pointer;
+        @include mix.transitionFor(0.2s, color);
+
+        &:hover {
+          background-color: $darkgreen;
+          color: #bbbbbb;
+          @include mix.transitionFor(0.2s, color);
+        }
+      }
+    }
+  }
+}

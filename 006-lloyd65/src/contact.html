@@ -1,0 +1,55 @@
+{% extends 'template/_layout.html' %}
+
+{% block main %}
+
+<section class="hero">
+  <picture class='bg'>
+    <source media="(min-width: 540px)" srcset="img/site_images/contact-bg.jpg">
+    <img src="img/site_images/contact-m.jpg" alt='Hero Image' />
+  </picture>
+  <div class='overlay'></div>
+  <div class=scroll id=scrollDownBtn>
+    SCROLL DOWN
+    <img class='arrow' src="img/site_assets/scroll-down.svg" alt="Scroll Down">
+  </div>
+  <div class='heroCaption'>
+    <div class='caption'>CONTACT US</div>
+    <div class='animateBox'></div>
+  </div>
+</section>
+
+<section class='page-build bgBlack sliceRight'>
+  <img class='bg hasFloatBox' src='img/site_images/contact-enquiry.jpg' alt='bg' />
+  <div class=floatBox>
+    <ul class=agentList>
+      <!-- <li>
+        <span class=info>MOHAMED YASEEN <a href=tel:+6581886111>+65 8188 6111</a></span>
+        <span class=company>CEA: R029314A / L3007487F</span>
+        <img src=img/site_assets/agent-savills.svg alt=YASEEN />
+      </li> -->
+      <li>
+        <span class=info>Phone: <a href=tel:+6581886111>(+84)905262811</a></span>
+      </li>
+      <li>
+        <span class=info>Phone: <a href=tel:+6581886111>(+84)1698108211</a></span>
+      </li>
+      <li>
+        <span class=info>Follow us on Social Media: </span>
+      </li>
+      <li class="listLogo">
+        <span><a href="https://www.facebook.com/"><img src="/img/site_assets/facebook.svg" alt="fb"></a></span>
+        <span><a href="https://twitter.com/"><img src="/img/site_assets/twiiter.svg" alt="tw"></a></span>
+        <span><a href="https://www.google.com/"><img src="/img/site_assets/google.svg" alt="gg"></a></span>
+      </li>
+    </ul>
+  </div>
+  <h3>ARRANGE A PRIVATE VIEWING</h3>
+  <p>
+    Show Suites Available for Viewing by Appointment or Walk In<br />
+    65 Lloyd Road, Singapore 239 114<br />
+    Open daily from 12pm to 6pm<br />
+  </p>
+
+  {% include 'template/form.html' %}
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Cera-Gr';
+  src: url('../fonts/cera_gr-webfont.eot');
+  src: url('../fonts/cera_gr-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cera_gr-webfont.woff2') format('woff2'),
+    url('../fonts/cera_gr-webfont.woff') format('woff'),
+    url('../fonts/cera_gr-webfont.ttf') format('truetype'),
+    url('../fonts/cera_gr-webfont.svg#ceragr-regularuploaded_file')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cera-Gr';
+  src: url('../fonts/cera_gr_medium-webfont.eot');
+  src: url('../fonts/cera_gr_medium-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/cera_gr_medium-webfont.woff2') format('woff2'),
+    url('../fonts/cera_gr_medium-webfont.woff') format('woff'),
+    url('../fonts/cera_gr_medium-webfont.ttf') format('truetype'),
+    url('../fonts/cera_gr_medium-webfont.svg#ceragr-mediumuploaded_file')
+      format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

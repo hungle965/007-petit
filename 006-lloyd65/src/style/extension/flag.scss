@@ -1,0 +1,34 @@
+@use '../mix' as mix;
+@use '../var' as *;
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+.select2 {
+  display: none;
+  @media screen and(min-width: 426px) {
+    display: block;
+  }
+}
+.select2-dropdown {
+  background-color: transparent;
+}
+.select2-search__field {
+  background-color: transparent;
+  color: #bbb;
+}
+.select2-search--dropdown {
+ background: $darkgreen;
+}
+.select2-container--open .select2-dropdown--below {
+  border: 1px solid #aaa;
+}
+:focus {
+  outline: none;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field{
+  background: $lightgreen;
+}

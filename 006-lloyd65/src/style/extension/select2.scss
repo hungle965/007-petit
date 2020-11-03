@@ -1,0 +1,56 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+.select2 {
+  color: #bbb;
+
+  .select2-selection--multiple {
+    font-weight: normal;
+    background: none;
+    outline: none;
+    border-radius: 0;
+    padding: 1px 3px;
+    color: #bbb;
+
+    @include transitionFor(border-color 0.3s ease-in-out);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &.select2-container--default.select2-container--focus
+    .select2-selection--multiple {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &.select2-container .select2-search--inline .select2-search__field {
+    color: #bbb;
+    margin-top: 9px;
+  }
+
+  &.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+  }
+}
+
+.select2-container {
+  &.select2-container--default {
+    .select2-results__option--highlighted[aria-selected] {
+      background-color: $lightgreen;
+      color: #bbb;
+    }
+    .select2-results > .select2-results__options {
+      background-color: $darkgreen;
+      color: #bbb;
+    }
+
+    .select2-results__option[aria-selected='true'] {
+      background-color: rgba($lightgreen, 0.5);
+      color: #4b4b4b;
+    }
+  }
+}

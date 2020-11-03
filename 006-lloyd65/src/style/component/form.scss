@@ -1,0 +1,65 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+.form {
+  margin-top: 24px;
+
+  > label,
+  > input,
+  > select,
+  > textarea {
+    display: block;
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    padding: 0;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+  }
+
+  > label {
+    margin-bottom: 10px;
+  }
+
+  > input,
+  > select,
+  > textarea {
+    font: normal normal normal 14px/16px $fontFamily;
+    resize: none;
+    font-weight: normal;
+    background: none;
+    outline: none;
+    border-radius: 0;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    width: 100%;
+    color: #bbb;
+
+    @include transitionFor(border-color 0.3s ease-in-out);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  input[type='checkbox'] {
+    appearance: checkbox;
+    margin-right: 8px;
+  }
+
+  > button[type='submit'] {
+    display: block;
+    margin: 0 0 0 auto;
+  }
+
+  > .select2,
+  > .iti {
+    margin-bottom: 30px;
+    width: 100%;
+
+    > input {
+      width: 100%;
+    }
+  }
+}

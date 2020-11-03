@@ -1,0 +1,146 @@
+{% extends 'template/_layout.html' %} {% block main %}
+<section class="hero amenities">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="bg">
+          <source media="(min-width: 540px)" srcset="/img/site_images/amenities-masthead-bg.jpg" />
+          <img src="/img/site_images/amenities-masthead-bg.jpg" alt="Hero Image" />
+        </picture>
+        <div class="boxCaption">
+          <div class='caption'>
+            <h3>RESIDENCES</h3>
+            <p>
+              Lloyd Sixtyfive promises a lifetime of opulence for the exclusive owners
+              of the freehold abode illuminating Orchard Road.
+            </p>
+            <button class="button">VIEW RESIDENCES</button>
+          </div>
+        </div>
+        <div class='overlay'></div>
+      </div>
+      <div class="swiper-slide">
+        <picture class="bg">
+          <source media="(min-width: 540px)" srcset="/img/site_images/neighborhood-masthead.jpg" />
+          <img src="/img/site_images/neighborhood-masthead.jpg" alt="Hero Image" />
+        </picture>
+        <div class="boxCaption">
+          <div class='caption'>
+            <h3>RESIDENCES</h3>
+            <p>
+              Alias laudantium facilis esse iste voluptatibus,
+              cum, praesentium culpa quas reprehenderit, ab quia sed asperiores
+            </p>
+            <button class="button">VIEW RESIDENCES</button>
+          </div>
+        </div>
+        <div class='overlay'></div>
+      </div>
+      <div class="swiper-slide">
+        <picture class="bg">
+          <source media="(min-width: 540px)" srcset="/img/site_images/team-masthead-bg.jpg" />
+          <img src="/img/site_images/team-masthead-bg.jpg" alt="Hero Image" />
+        </picture>
+        <div class="boxCaption">
+          <div class='caption'>
+            <h3>RESIDENCES</h3>
+            <p>
+              Exercitationem nam eligendi eius doloremque harum corporis repudiandae eveniet quae!
+              Maxime, ab? Sunt, tempora quia.
+            </p>
+            <button class="button">VIEW RESIDENCES</button>
+          </div>
+        </div>
+        <div class='overlay'></div>
+      </div>
+      <div class="swiper-slide">
+        <picture class="bg">
+          <source media="(min-width: 540px)" srcset="/img/site_images/residences-separator01.jpg" />
+          <img src="/img/site_images/residences-separator01.jpg" alt="Hero Image" />
+        </picture>
+        <div class="boxCaption">
+          <div class='caption'>
+            <h3>RESIDENCES</h3>
+            <p>
+              Excepturi architecto nemo eos sapiente? Rerum numquam iure
+              eligendi doloribus.
+            </p>
+            <button class="button">VIEW RESIDENCES</button>
+          </div>
+        </div>
+        <div class='overlay'></div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="scroll" id=scrollDownBtn>
+    SCROLL DOWN
+    <img class='arrow' src="img/site_assets/scroll-down.svg" alt="Scroll Down">
+  </div>
+  <a class=playVideoBtn href="https://www.youtube.com/watch?v=Fyo9JLcQcZA" data-lity>
+    <img class=icon src=img/site_assets/icon-playvid.svg alt="Play Video" />
+    <span class="text">Play Video</span>
+  </a>
+</section>
+<section class="page-build" style="padding-top: 90px;">
+  <h3>SAMPLE SECTION</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <span class="quo">- Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+  <button class="button">CLICK ME</button>
+</section>
+<section class="secParallax page-build">
+  <img class="bgAmenities" id="bgPrl" src="./img/site_images/amenities-separator01.jpg" alt="amenities">
+  <img class="bgSm" src="./img/site_images/amenities-separator01.jpg" alt="amenities">
+</section>
+<section class="page-build">
+  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+<section class="page-build bgBlack sliceRight">
+  <img class="bg" src="img/site_images/Home-enquiry.jpg" />
+  <h3>ARRANGE A PRIVATE VIEWING</h3>
+  <p>
+    Show Suites Available for Viewing by Appointment or Walk In<br />
+    65 Lloyd Road, Singapore 239 114<br />
+    Open daily from 12pm to 6pm<br />
+  </p>
+
+  {% include 'template/form.html' %}
+</section>
+{% endblock %}

@@ -1,0 +1,41 @@
+// Override Default Styles
+@use 'var';
+
+html,
+body {
+  font: 14px/22px var.$fontFamily;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+
+  &:not(:hover) {
+    text-decoration: none;
+  }
+  &:hover:not(:disabled) {
+    color: inherit;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #313c46;
+}
+::-webkit-scrollbar {
+  background: #bbbbbb;
+  width: 10px;
+}

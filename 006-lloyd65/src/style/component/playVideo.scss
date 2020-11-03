@@ -1,0 +1,31 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+.playVideoBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover:not(:disabled) {
+    text-decoration: none;
+  }
+
+  > .icon {
+    width: 33px;
+    height: 24px;
+    margin-right: 8px;
+    opacity: 0.8;
+    @include transitionFor(opacity 0.5s ease);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  > .text {
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

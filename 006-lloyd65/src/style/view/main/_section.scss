@@ -1,0 +1,104 @@
+@use '../../var' as *;
+
+.page-build {
+  background-color: $darkgreen;
+  color: $lgrey;
+  padding: 50px 7.5vw;
+
+  @media screen and (min-width: $md) {
+    padding: 64px 7.5vw;
+  }
+
+  &.bgBlack {
+    background-color: #111519;
+  }
+
+  > .bg {
+    display: block;
+    height: 60vh;
+    width: 100vw;
+    object-fit: cover;
+    margin: -50px -7.5vw 50px;
+
+    &.hasFloatBox {
+      display: none;
+    }
+
+    @media screen and (min-width: $md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      margin: 0;
+
+      &.hasFloatBox {
+        display: block;
+      }
+    }
+  }
+  > .floatBox {
+    margin: -50px -7.5vw 50px;
+    padding: 40px 0;
+    background: $dgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $md) {
+      position: absolute;
+      bottom: 0;
+      right: 15vw;
+      width: 35vw;
+      height: 90%;
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    &.sliceRight {
+      position: relative;
+      padding-right: calc(50vw + 100px);
+
+      > .bg {
+        left: unset;
+        right: 0;
+        width: 50vw;
+      }
+    }
+
+    &.sliceLeft {
+      position: relative;
+      padding-left: calc(50vw + 100px);
+
+      > .bg {
+        left: 0;
+        right: unset;
+        width: 50vw;
+      }
+    }
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    @media screen and (min-width: $md) {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  .quo {
+    font-size: 12px;
+    margin-top: 15px;
+    display: block;
+    color: #8d9093;
+  }
+}

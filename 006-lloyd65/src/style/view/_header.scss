@@ -1,0 +1,227 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: $darkgreen;
+  z-index: 4;
+
+  transition: all 0.3s ease;
+
+  &.hide {
+    background-color: transparent;
+
+    .navBrand,
+    .enquiry {
+      opacity: 0;
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    height: 80px;
+
+    &.clear {
+      background-color: transparent;
+    }
+    &.hide {
+      top: -80px;
+    }
+  }
+
+  > .navContainer {
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    > .navBrand {
+      @include transitionFor(opacity 0.3s ease);
+      > img {
+        height: 50px;
+        object-fit: contain;
+        object-position: top;
+      }
+    }
+    > .rightNav {
+      color: #fff;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+
+      .phone {
+        position: relative;
+        margin: 0 20px;
+        display: none;
+        padding: 20px 0px;
+
+        @media screen and (min-width: $sm) {
+          display: inline;
+        }
+        a:nth-child(1) {
+          margin-right: 10px;
+        }
+        a:nth-child(2) {
+          margin-left: 10px;
+        }
+
+        .hotline {
+          position: absolute;
+          left: 10px;
+          top: 0;
+        }
+      }
+
+      .enquiry {
+        font-size: 14px;
+        cursor: pointer;
+        margin: 0 20px;
+
+        @include transitionFor(opacity 0.3s ease);
+      }
+    }
+  }
+
+  > .mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $darkgreen;
+
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    @include transitionFor(opacity 0.5s ease);
+
+    &.active {
+      opacity: 1;
+      z-index: 0;
+      pointer-events: initial;
+
+      > .navFloating > .bg {
+        transform: translateY(2%);
+
+        @media screen and (min-width: $md) {
+          transform: translateX(2%);
+        }
+      }
+    }
+
+    > .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+      pointer-events: none;
+
+      @media screen and (min-width: $md) {
+        width: 50%;
+        height: 100%;
+      }
+    }
+
+    > .navFloating {
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      left: 7.5%;
+      width: 85%;
+      margin: 0 auto;
+      transform: translateY(-50%);
+
+      @media screen and (min-width: $md) {
+        top: 0;
+        left: 10%;
+        width: 80%;
+        height: 90vh;
+        transform: none;
+      }
+
+      > .bg {
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+
+        @include transitionFor(transform 1.5s ease);
+
+        @media screen and (min-width: $md) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 66.66667%;
+          height: 100%;
+        }
+      }
+
+      .active a {
+        color: $white;
+      }
+      a {
+        color: $lgrey;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include transitionFor(color 0.3s ease);
+        &:hover {
+          color: $white;
+        }
+      }
+
+      > .primaryNav {
+        list-style: none;
+        margin: 20px 0 0;
+        padding: 0;
+
+        @media screen and (min-width: $md) {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          text-align: right;
+          margin: 0;
+        }
+
+        > li {
+          padding: 4px 0;
+          font-size: 16px;
+
+          @media screen and (min-width: $md) {
+            padding: 10px 0;
+            font-size: 18px;
+          }
+        }
+      }
+
+      > .secondaryNav {
+        margin: 10px 0 0;
+        padding: 0;
+        text-align: right;
+        list-style: none;
+
+        @media screen and (min-width: $md) {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin: 0;
+        }
+
+        > li {
+          padding: 2px 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

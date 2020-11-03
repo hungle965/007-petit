@@ -1,0 +1,102 @@
+@use '../mix';
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  color: black;
+
+  .swiper-pagination-bullet-active {
+    background: aliceblue;
+    animation: flash 1s;
+  }
+
+  .swiper-pagination {
+    bottom: 15px;
+  }
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #1a2026;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  > .bg {
+    width: 100%;
+    height: 100vh;
+    img {
+      width: auto;
+      height: 100vh;
+      object-fit: cover;
+      @media screen and(min-width: 1025px) {
+        width: 100%;
+        height: unset;
+      }
+    }
+  }
+
+  > .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .boxCaption {
+    display: none;
+    @media screen and (min-width: 769px) {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      padding-left: 40px;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      > .caption {
+        opacity: 0;
+        position: absolute;
+        padding-right: 40px;
+        z-index: 20;
+        bottom: 60px;
+        color: #fff;
+        text-align: left;
+        animation: heroCaptionFadeInOut 7s ease .5s forwards;
+      }
+    }
+  }
+}
+
+@keyframes heroCaptionExpanding {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  15% {
+    width: 0;
+    height: 100%;
+    border-left-width: 1px;
+  }
+  30%,
+  100% {
+    width: 100%;
+    height: 100%;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+  }
+}
+@keyframes heroCaptionFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}

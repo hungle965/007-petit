@@ -1,0 +1,53 @@
+.scroll {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+
+  .arrow {
+    width: 17px;
+    height: 23.84px;
+    margin-left: 10px;
+    animation: animScrollDown 4s infinite;
+
+    &.up {
+      animation: animScrollUp 4s infinite;
+    }
+  }
+}
+
+@keyframes animScrollDown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animScrollUp {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

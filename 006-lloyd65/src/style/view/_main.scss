@@ -1,0 +1,8 @@
+.main {
+  > {
+    @import './main/hero';
+    @import './main/section';
+  }
+  @import './main/contact';
+  @import './main/amenities';
+}

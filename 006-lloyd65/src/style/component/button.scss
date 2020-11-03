@@ -1,0 +1,44 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+.button {
+  display: inline-block;
+  font: normal normal normal 14px/20px $fontFamily;
+  background-color: rgba($color: $darkgreen, $alpha: 0.2);
+  border-radius: 0;
+  border: 1px solid $lgrey;
+  color: $lgrey;
+  margin-top: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  @include transitionFor(0.3s ease, color, background-color, opacity, border);
+
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+    box-shadow: none;
+  }
+  &:hover:not(:disabled) {
+    background-color: rgba($color: $white, $alpha: 0.9);
+    border-color: $lgrey;
+    color: $darkgreen;
+  }
+  &:focus:not(:disabled):not(:disabled):not(:disabled),
+  &:active:not(:disabled):not(:disabled):not(:disabled) {
+    box-shadow: none;
+    background-color: rgba($color: $darkgreen, $alpha: 0.9);
+    border-color: $white;
+    color: $white;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
