@@ -1,0 +1,328 @@
+.main {
+  width: 100%;
+  .heroSection {
+    overflow: hidden;
+    display: grid;
+    grid:
+      auto-flow 1fr 1fr
+      / 1fr;
+
+    @media (min-width: 850px) {
+      grid:
+        auto-flow 1fr
+        / 1fr 1fr;
+    }
+
+    .heroSectionLeft {
+      background-image: url("https://res.cloudinary.com/luxuryp/image/upload/q_auto:good,f_auto,w_3000,c_limit/5UJallbDmNvFQWFV");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+
+      .social-icons {
+        position: absolute;
+        left: 50px;
+        bottom: 30px;
+        max-width: 150px;
+
+        // @media (max-width: 800px) {
+
+        // } 
+
+        a {
+          background-color: #fff;
+          border-radius: 55px;
+          border: 1px solid rgb(231, 231, 231);
+          font-size: 13px;
+          padding: 5px 12px 10px 12px;
+          margin-right: 10px;
+          color: black;
+          transition: 0.5s;
+          &:hover {
+            color: #fff;
+            background-color: black;
+            border: 1px solid black;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+
+    .heroSectionRight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      width: 100%;
+      height: 85%;
+      position: relative;
+
+      .mainContent {
+        width: 100%;
+        line-height: 25px;
+        font-family: "CompassSans", sans-serif;
+        padding: 20px;
+        position: relative;
+        font-size: 15px;
+
+        @media screen and (min-width: 850px) {
+          max-width: 410px;
+          padding: 0;
+        }
+
+        .waterMark {
+          position: absolute;
+          bottom: 110px;
+          left: 30px;
+          color: rgba(48, 51, 57, 0.03);
+          font-size: 200px;
+          height: 100%;
+          font-family: "CompassSerif", serif;
+          font-weight: normal;
+          pointer-events: none;
+        }
+
+        .CW {
+          font-family: "CompassSerif", serif;
+          font-weight: normal;
+        }
+        .buttonContent {
+          display: block;
+
+          @media (min-width: 480px) {
+            display: flex;
+          }
+
+          .buttonSetting {
+            margin-right: 15px;
+
+            .mainContentButton {
+              margin-right: 15px;
+              margin-top: 15px;
+
+              &:hover {
+                text-decoration: none;
+              }
+
+              .contentButton {
+                display: block;
+                padding: 14px 20px;
+                min-width: 150px;
+                font-size: 16px;
+                line-height: 16px;
+                text-align: center;
+                border: 2px solid black;
+                text-decoration: none;
+                color: black;
+                position: relative;
+                z-index: 1;
+                transition: 0.5s;
+
+                &:hover {
+                  color: #fff;
+                  transition: 0.5s;
+                }
+                &::after {
+                  background-color: #000;
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  width: 100%;
+                  height: 0px;
+                  z-index: -1;
+                  will-change: height;
+                  transition: height 0.5s;
+                }
+
+                &:hover::after {
+                  height: 99%;
+                }
+              }
+
+              .contentButton2 {
+                display: block;
+                padding: 14px 20px;
+                min-width: 150px;
+                font-size: 16px;
+                line-height: 16px;
+                text-align: center;
+                border: 2px solid black;
+                text-decoration: none;
+                color: #fff;
+                background-color: black;
+                position: relative;
+                z-index: 1;
+                transition: 0.5s;
+
+                &:hover {
+                  color: black;
+                  transition: 0.5s;
+                }
+                &::after {
+                  background-color: #fff;
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  width: 100%;
+                  height: 0px;
+                  z-index: -1;
+                  will-change: height;
+                  transition: height 0.5s;
+                }
+
+                &:hover::after {
+                  height: 99%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactContent {
+    display: block;
+    margin: 100px auto 0;
+
+    @media (min-width: 767px) {
+      display: grid;
+      grid: auto-flow 1fr / 1fr 1fr;
+      max-width: 1300px;  
+      margin: 100px auto;
+    }
+
+    .contactLeft {
+      margin: 0 25px;
+      margin-bottom: 50px;
+
+      .buttonIcons {
+        margin-bottom: 50px;
+        a {
+          border-radius: 36px;
+          width: 36px;
+          height: 36px;
+          display: inline-flex;
+          border: 1px solid rgb(235, 235, 235);
+          font-size: 12px;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          margin-left: 10px;
+          transition: 0.5s;
+          &:hover {
+            color: #fff;
+            background-color: black;
+            border: 1px solid black;
+            transition: 0.5s;
+          }
+        }
+      }
+
+      .contactTitle {
+        margin-bottom: 20px;
+        font-family: "CompassSerif", serif;
+
+        h4 {
+          font-weight: normal;
+          font-size: 30px;
+        }
+      }
+
+      form {
+        .formGroup {
+          margin-bottom: 10px;
+
+          input {
+            display: block;
+            float: none;
+            padding: 13px 17px 13px;
+            border: 1px solid #eeeeee;
+            font-size: inherit;
+            font-family: inherit;
+            width: 100%;
+          }
+
+          textarea {
+            height: 200px;
+            display: block;
+            float: none;
+            width: 100%;
+            border: 1px solid #eeeeee;
+            font-size: inherit;
+            font-family: inherit;
+            padding: 13px 17px 13px;
+          }
+        }
+      }
+
+      .contactButton {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        text-transform: none;
+
+        .buttonSpan {
+          display: block;
+          padding: 14px 40px;
+          font-size: 16px;
+          font-style: normal;
+          text-transform: none;
+          background: black;
+          border: 1px solid black;
+          color: #fff;
+          transition: 0.5s ease;
+
+          &:hover {
+            background: #fff;
+            color: black;
+            transition: 0.5s ease;
+          }
+        }
+      }
+    }
+
+    .contactRight {
+      margin: 0 25px;
+
+      .contactInfo {
+        display: flex;
+        margin-bottom: 70px;
+
+        .infoLeft {
+          -webkit-flex: 1 1 0;
+          
+          p {
+            line-height: inherit;
+            margin: 0;
+          }
+        }
+      }
+      .contactMap {
+        iframe {
+          width: 100%;
+          height: 355px;
+        }
+      }
+    }
+  }
+}
+.fadeIn {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+
+  
+}
+
+.fadeIn.appear {
+    opacity: 1;
+  }
