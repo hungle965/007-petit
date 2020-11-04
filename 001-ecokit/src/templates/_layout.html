@@ -39,6 +39,11 @@
             direction: 'horizontal',
             loop: true,
 
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
             pagination: {
                 el: '.swiper-pagination',
             },
@@ -89,33 +94,28 @@
 
     </script>
 
-    <!-- <script>
-        var swiper2 = new Swiper('.swiper-container2', {
-            direction: 'horizontal',
-            loop: true,
-
-
-
-
-        });
-    </script> -->
-
     <script>
         var swiper3 = new Swiper('.swiper-container3', {
-            direction: 'vertical',
-            loop: true,
-
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            breakpoints: {
+                // when window width is >= 1000px
+                1000: {
+                    direction: 'vertical',
+                    loop: true,
 
-            slidesPerView: 1,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
 
-            spaceBetween: 0,
+
+                },
+            }
+
         });
 
-        
+
     </script>
 </body>
 
