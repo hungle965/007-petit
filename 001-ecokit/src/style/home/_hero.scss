@@ -11,6 +11,95 @@
     height: 100%;
     position: relative;
 
+    .swiper-container3 {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      overflow: hidden;
+      list-style: none;
+      padding: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+
+      .swiper-wrapper {
+        transition: transform 2s !important;
+        .swiper-slide {
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
+
+        .slidehero1 {
+          background: url(../../img/1/gallery-ecokit-jindabyne-01-min.jpg);
+        }
+
+        .slidehero2 {
+          background: url(../../img/1/gallery-ecokit-jindabyne-02-min.jpg);
+        }
+
+        .slidehero3 {
+          background: url(../../img/1/gallery-ecokit-jindabyne-03-min.jpg);
+        }
+
+        .slidehero4 {
+          background: url(../../img/1/gallery-ecokit-jindabyne-04-min.jpg);
+        }
+
+        .slidehero5 {
+          background: url(../../img/2/gallery-ecokit-jindabyne-05-min.jpg);
+        }
+
+        .slidehero6 {
+          background: url(../../img/4/breakout_edgy_14-Photo-1.jpg);
+        }
+
+        .slidehero7 {
+          background: url(../../img/4/2.jpg);
+        }
+
+        .slidehero8 {
+          background: url(../../img/4/Ambience_iconic.jpg);
+        }
+
+        .slidehero9 {
+          background: url(../../img/4/Breakout_dynamic-1.jpg);
+        }
+
+        .slidehero10 {
+          background: url(../../img/4/Confidence_iconic.jpg);
+        }
+
+        .slidehero11 {
+          background: url(../../img/4/Confidence_iconic2.jpg);
+        }
+
+        .slidehero12 {
+          background: url(../../img/4/serenity_edgy.jpg);
+        }
+
+        .slidehero13 {
+          background: url(../../img/4/escape_iconic.jpg);
+        }
+
+        .slidehero14 {
+          background: url(../../img/4/Independence_iconic.jpg);
+        }
+
+        .slidehero15 {
+          background: url(../../img/4/Independence_sleek.jpg);
+        }
+
+        .slidehero16 {
+          background: url(../../img/4/Serenity_sleek.jpg);
+        }
+      }
+    }
+
     .arrowDown {
       display: none;
 
@@ -301,6 +390,12 @@
         height: 80px;
         position: absolute;
         z-index: 10;
+      }
+    }
+
+    .hideHero {
+      @media (min-width: 1024px) {
+        display: none;
       }
     }
   }

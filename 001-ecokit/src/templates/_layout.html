@@ -33,70 +33,90 @@
     </div>
     <script src="/js/index.js"></script>
     <script type="module">
-        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+        // import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 
         const swiper = new Swiper('.swiper-container', {
-
-            spaceBetween: 0,
-
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
             direction: 'horizontal',
             loop: true,
-        })
-    </script>
-
-    <script>
-        var swiper2 = new Swiper('.swiper-container2', {
-            direction: 'horizontal',
-            loop: true,
-
-        
-            spaceBetween: 20,
-            clickable: true,
-            width: 500,
-            
 
             pagination: {
                 el: '.swiper-pagination',
-                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
 
             breakpoints: {
                 // when window width is >= 320px
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 0
+                    spaceBetween: 0,
+
+                    clickable: true,
+
                 },
-                // when window width is >= 500px
+                // when window width is >= 50px
                 500: {
-                    // slidesPerView: 2,
-                    spaceBetween: 20,
+                    direction: 'horizontal',
+                    loop: true,
+                    slidesPerView: 1.5,
+                    centeredSlides: true,
+                    spaceBetween: 10,
+
+                    clickable: true,
 
 
+
+                },
+                // when window width is >= 800px
+                800: {
+                    direction: 'horizontal',
+                    loop: true,
+
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
                 },
             }
+        })
 
-        });
+
     </script>
 
     <!-- <script>
-        var swiper3 = new Swiper('.swiper-container3', {
-            slidesPerView: 3,
-            slidesPerColumn: 2,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
+        var swiper2 = new Swiper('.swiper-container2', {
+            direction: 'horizontal',
+            loop: true,
+
+
+
+
         });
     </script> -->
+
+    <script>
+        var swiper3 = new Swiper('.swiper-container3', {
+            direction: 'vertical',
+            loop: true,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            slidesPerView: 1,
+
+            spaceBetween: 0,
+        });
+
+        
+    </script>
 </body>
 
 </html>
