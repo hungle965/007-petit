@@ -266,23 +266,6 @@
           background-size: cover !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
-          width: 500px !important;
-          height: 330px !important;
-
-          @media (max-width: 500px) {
-            width: 100% !important;
-            height: 285px !important;
-          }
-
-          @media (max-width: 400px) {
-            width: 100% !important;
-            height: 250px !important;
-          }
-
-          @media (max-width: 350px) {
-            width: 100% !important;
-            height: 213px !important;
-          }
         }
 
         .slide1 {
@@ -351,7 +334,8 @@
       }
 
       .swiper-pagination {
-        bottom: 10px;
+        bottom: -4px;
+        z-index: 100;
       }
     }
 
