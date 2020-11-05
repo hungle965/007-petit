@@ -13,10 +13,7 @@
     <!-- cta-button -->
     <script src="https://unpkg.com/@nerd-coder/cta-bar/dist/main.js" async></script>
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
@@ -33,15 +30,13 @@
     </div>
     <script src="/js/index.js"></script>
     <script type="module">
-        // import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
-
         const swiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
             loop: true,
 
             autoplay: {
                 delay: 3000,
-                disableOnInteraction: false,
+
             },
 
             speed: 1000,
@@ -66,35 +61,31 @@
                 },
                 // when window width is >= 50px
                 500: {
-                    direction: 'horizontal',
-                    loop: true,
+
                     slidesPerView: 1.5,
                     centeredSlides: true,
                     spaceBetween: 10,
-
                     clickable: true,
-
-                  
-
                 },
                 // when window width is >= 800px
                 800: {
-                    direction: 'horizontal',
-                    loop: true,
 
                     slidesPerView: 1,
                     spaceBetween: 0,
 
                     autoplay: {
                         delay: 3000,
-                        disableOnInteraction: false,
+
                     },
                 },
+
             }
         })
 
 
     </script>
+
+
 
     <script>
         var swiper3 = new Swiper('.swiper-container3', {
