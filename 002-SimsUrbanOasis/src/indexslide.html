@@ -20,7 +20,7 @@
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <div class="movieBtn">
+            <div class="movieBtn" onclick="document.querySelector('#secTwo').scrollIntoView({ behavior: 'smooth' })">
                 <img src="./img/assets/down.svg" alt="down arrow">
             </div>
             <!-- If we need scrollbar -->
@@ -39,7 +39,7 @@
     </div>
 </section>
 {% include './templates/layout/_header.html' %}
-<section class="secTwo">
+<section class="secTwo" id="secTwo">
     <div class="contentContainer">
         <div class="wrapper">
             <div class="layoutContent design">

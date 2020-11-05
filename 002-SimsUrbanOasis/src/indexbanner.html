@@ -3,17 +3,17 @@
 <section class="hero page-build">
   <div class="wrapper">
     <div class="bannerimg">
-        <div class="textbanner">
-            <h1>The Avenir Condo</h1>
-            <p>A rare freehold home</p> 
-            <p>In the heart of the city</p>
-            <div class="btnbanner">
-                <span>REGISTER YOUR INTEREST NOW</span>
-            </div>
+      <div class="textbanner">
+        <h1>The Avenir Condo</h1>
+        <p>A rare freehold home</p>
+        <p>In the heart of the city</p>
+        <div class="btnbanner">
+          <span>REGISTER YOUR INTEREST NOW</span>
         </div>
+      </div>
     </div>
     <img class="imgHero" src="/img/images/index-movieplaceholder.jpg" alt="">
-    <div class="movieBtn">
+    <div class="movieBtn" onclick="document.querySelector('#secTwo').scrollIntoView({ behavior: 'smooth' })">
       <img src="./img/assets/down.svg" alt="down arrow">
     </div>
     <div class="movieText">
@@ -25,7 +25,7 @@
   </div>
 </section>
 {% include './templates/layout/_header.html' %}
-<section class="secTwo">
+<section class="secTwo" id="secTwo">
   <div class="contentContainer">
     <div class="wrapper">
       <div class="layoutContent design">
