@@ -145,7 +145,6 @@
           left: 27%;
         }
 
-        
         @media (min-width: 1440px) {
           left: 46%;
         }
@@ -655,6 +654,7 @@
 .lowheight {
   .wrapper {
     background: #fff;
+    box-shadow: 0 3px 45px rgba(0, 0, 0, 0.15);
 
     @media (min-width: 800px) {
       height: 74px;

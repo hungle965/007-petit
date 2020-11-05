@@ -1,0 +1,25 @@
+{
+  "name": "007-petitjervois",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+    
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-format-html": "^1.2.5",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
