@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    asdasdsadsa
-</body>
-</html>
+{% extends 'templates/_layout.html' %}
+{% block main %}
+<section class="hero">
+    <div class="wrapper">
+        <figure>
+            <img class="mastLogo" src="./img/P-Logo.svg" alt="">
+            <img class="mastImage" src="./img/mast-img.jpg" alt="">
+        </figure>
+        <article>
+            <img src="./img/PT-tag.svg" alt="">
+            <p>A collection of limited edition residences available now for sale.</p>
+        </article>
+    </div>
+</section>
+
+<section class="collect">
+    <div class="wrapper">
+        <article class="titleParent">
+            <h1>Embrace True <br> Luxury</h1>
+            <h2>THE FIRST PETIT COLLECTIBLE</h2>
+        </article>
+        <figure class="petitVideo">
+            <iframe id="ytplayer"
+                src="https://www.youtube.com/embed/uO6N1vLZhkk?rel=0&amp;controls=0&amp;showinfo=0&amp;vq=hd1080&amp;hd=1&amp;enablejsapi=1&amp;wmode=opaque&amp;rel=0&amp;autoplay=0&amp;showinfo=0&amp;showsearch=0&amp;fmt=18&amp;version=3"
+                allowtransparency="true" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+        </figure>
+    </div>
+</section>
+
+{% endblock %}

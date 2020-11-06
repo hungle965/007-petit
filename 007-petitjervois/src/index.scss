@@ -1,0 +1,176 @@
+@import "./style/header";
+@import "./style/home/home.scss";
+
+@font-face {
+  font-family: "KingsCalson";
+  src: url("./fonts/kingscaslon-regular-webfont.woff") format("woff"),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("./fonts/kingscaslon-regular-webfont.woff") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: "KingsCalsonBold";
+  src: url("./fonts/kingscaslon-bold-webfont.woff") format("woff"),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("./fonts/KingsCaslon-Bold.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: TheInHardt;
+  src: url("./fonts/Theinhardt-Lt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: TheInHardtReg;
+  src: url("./fonts/Theinhardt-Rg.otf") format("opentype");
+}
+@font-face {
+  font-family: TheInHardtMed;
+  src: url("./fonts/Theinhardt-Md.otf") format("opentype");
+}
+
+@font-face {
+  font-family: TheInHardtBold;
+  src: url("./fonts/Theinhardt-Bd.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: url(./img/shadow.jpg) rgb(255, 254, 242) no-repeat;
+  background-position: top right;
+  background-size: 100% auto;
+  color: #303030;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "TheInHardtReg";
+  letter-spacing: 0.1em;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: #231f20;
+  position: relative;
+  transition: width 0.2s;
+}
+
+p {
+  padding: 0px 25px;
+  font-size: 0.844em;
+  font-family: "TheInHardt";
+  line-height: 1.7em;
+  letter-spacing: 0.075em;
+}
+
+section {
+  margin-bottom: 105px;
+
+  p {
+    padding: 0px 25px;
+    font-size: 0.844em;
+    font-family: "TheInHardt";
+    line-height: 1.7em;
+    letter-spacing: 0.075em;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 150px;
+
+    p {
+      font-size: 0.844em;
+      line-height: 1.87em;
+      margin-top: 35px;
+      letter-spacing: 0.048em;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  margin: 0;
+}
+
+.titleParent {
+  h1 {
+    padding-left: 50px;
+    padding-right: 36px;
+    font-family: "KingsCalson";
+    font-size: 2.438em;
+    letter-spacing: 0.06em;
+    line-height: 1.1em;
+  }
+
+  h2 {
+    padding-left: 50px;
+    padding-right: 36px;
+    font-family: "KingsCalson";
+    font-size: 0.75em;
+    color: #a95436;
+    letter-spacing: 0.12em;
+    margin-top: 21px;
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      padding: 0px 75px;
+      font-family: "KingsCalson";
+      font-size: 2.75em;
+      letter-spacing: 0.06em;
+      line-height: 1.1em;
+      padding-left: 75px;
+      padding-right: 0px;
+    }
+
+    h2 {
+      padding: 0px 75px;
+      font-family: "KingsCalson";
+      font-size: 0.875em;
+      color: #a95436;
+      letter-spacing: 0.12em;
+      margin-top: 21px;
+      transform: translateY(30px);
+      padding-left: 75px;
+      padding-right: 0px;
+    }
+  }
+}
+
+.petitVideo {
+  width: 100%;
+  height: 53vw;
+  margin-top: 0px;
+  position: absolute;
+  top: 186px;
+  margin: 0;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(61% - 88px);
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 1000;
+    top: 0px;
+    margin-left: 76px;
+    height: 31vw;
+    max-height: 445px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 25px;
+
+  @media (min-width: 1024px) {
+    padding: 0 75px;
+  }
+}

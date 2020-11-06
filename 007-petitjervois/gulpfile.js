@@ -37,7 +37,10 @@ const html = () =>
     .pipe(formatHtml({ end_with_newline: true }))
     .pipe(dest("public"));
 
-const build = parallel(img, html, js, css);
+const copy = () =>
+  src(["src/fonts/**", "src/videos/**"], { base: "src" }).pipe(dest("public"));
+
+const build = parallel(img, html, js, css, copy);
 
 const watching = () => {
   sync.init({ server: { baseDir: "public" }, notify: false });
@@ -46,6 +49,7 @@ const watching = () => {
   watch("src/**/*.js", js);
   watch("src/**/*.scss", css);
   watch("src/**/*.html", html).on("change", sync.reload);
+  watch(['src/fonts/**', 'src/videos/**'], copy).on('change', sync.reload)
 };
 
 exports.build = build;
